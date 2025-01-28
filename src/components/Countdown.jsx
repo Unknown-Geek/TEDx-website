@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
+// Configure event date - Using Date object directly for better timezone handling
+const EVENT_DATE = new Date(2025, 2, 2, 9, 0, 0); // March 2nd, 2025, 9:00 AM
+
 const TimerUnit = ({ value, label }) => (
   <div className="p-2 flex flex-col justify-center items-center">
     <div className="text-[123px] font-microgramma font-bold text-[#161616] leading-[75px]">
@@ -18,25 +21,74 @@ const Separator = () => (
   </div>
 );
 
+const HurryUpAnimation = () => {
+  const [isFirstImage, setIsFirstImage] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIsFirstImage(prev => !prev);
+    }, 500); // image transition time
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="relative w-full h-[123px] flex justify-center ">
+      <img
+        src="../public/assets/Hurry Up 1.svg"
+        alt="Hurry Up"
+
+        className={`absolute  h-full object-contain transition-all duration-200 ease-in-out ${
+          isFirstImage ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+      <img
+        src="../public/assets/Hurry Up 2.svg"
+        alt="Hurry Up"
+        className={`absolute  h-full object-contain transition-all duration-200 ease-in-out ${
+          !isFirstImage ? 'opacity-100' : 'opacity-0'
+        }`}
+      />
+    </div>
+  );
+};
+
 const Countdown = () => {
-  const [timeLeft, setTimeLeft] = useState({
-    days: 35,
-    hours: 8,
-    minutes: 22,
-    seconds: 46
-  });
+  const calculateTimeLeft = () => {
+    const now = new Date();
+    const difference = EVENT_DATE - now;
+
+    if (difference <= 0) {
+      return {
+        days: 0,
+        hours: 0,
+        minutes: 0,
+        seconds: 0
+      };
+    }
+
+    const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((difference / 1000 / 60) % 60);
+    const seconds = Math.floor((difference / 1000) % 60);
+
+    return { days, hours, minutes, seconds };
+  };
+
+  const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
   useEffect(() => {
     const timer = setInterval(() => {
-      // Add countdown logic here
+      setTimeLeft(calculateTimeLeft());
     }, 1000);
+
     return () => clearInterval(timer);
   }, []);
 
-return (
-    <div className="container mx-auto p-4">
+  return (
+    <div className="container mx-auto pt-20 px-20">
         {/* Countdown Timer */}
-      <div className="w-full pt-[29px] px-2 mb-16 bg-[rgba(250,250,250,0.50)] rounded-[20px] border-[5px] border-[#E31C25] backdrop-blur-[6.4px] flex justify-center items-center gap-2">
+      <div className="w-full pt-[29px] px-2 mb-8 bg-[rgba(250,250,250,0.50)] rounded-[20px] border-[5px] border-[#E31C25] backdrop-blur-[6.4px] flex justify-center items-center gap-2">
         <TimerUnit value={timeLeft.days} label="Days" />
         <Separator />
         <TimerUnit value={timeLeft.hours} label="Hours" />
@@ -47,8 +99,8 @@ return (
       </div>
       
       {/* Hurry Up Text Row */}
-      <div className="w-full flex justify-center items-center gap-1">
-        <img src="/assets/Hurry Up 1.svg" alt="Hurry Up" className="h-[123px]" />
+      <div className="flex justify-center items-center -mt-4 pt-5">
+        <HurryUpAnimation />
       </div>
     </div>
   );

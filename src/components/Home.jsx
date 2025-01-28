@@ -10,7 +10,7 @@ const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto p-20">
       {/* Navigation */}
       <nav className="flex justify-between items-center gap-6 mb-8">
         <div className="flex items-center">
@@ -75,7 +75,7 @@ const Home = () => {
           >
             BOOK TICKETS
             <ArrowUpRight
-              className={`w-12 h-12 transition-all duration-300 ease-in-out ${isHovered ? "rotate-45" : "rotate-22"}`}
+              className={`w-16 h-16 pl-2 transition-all duration-300 ease-in-out ${isHovered ? "rotate-45" : "rotate-22"}`}
             />
           </button>
 
