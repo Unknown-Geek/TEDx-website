@@ -1,3 +1,6 @@
+import Lottie from 'lottie-react';
+import dateLottie from './assets/Date Lottie.json';
+
 function App() {
   return (
     <div className="container mx-auto p-4">
@@ -51,13 +54,11 @@ function App() {
           </button>
 
           {/* Date Display */}
-          <div className="bg-[#161616] rounded-[20px] p-8 text-[#FAFAFA] h-[297px] flex justify-center items-center gap-8 relative">
-            <div className="flex flex-col gap-3.5 -mt-4">
-              <div className="text-[200px] font-vanguard font-black tracking-[4px] leading-[0.85]">25</div>
-              <div className="text-right text-[123px] font-vanguard font-black leading-none">JAN</div>
-            </div>
-            <div className="w-[257px] h-0 rotate-90 origin-top-left border-t-[5px] border-[#FAFAFA] translate-y-[40px] translate-x-[40px]" />
-            <span className="rotate-90 origin-top-left text-[76px] font-microgramma font-bold translate-y-[40px] translate-x-[40px]">2025</span>
+          <div className="bg-[#161616] rounded-[20px] h-[297px] flex justify-center items-center">
+            <Lottie 
+              animationData={dateLottie}
+              className="w-full h-full"
+            />
           </div>
         </div>
       </div>
