@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Lottie from 'lottie-react';
 import dateLottie from '/public/assets/Date Lottie.json';
 import image535 from '/public/assets/image 535.png';
 import image536 from '/public/assets/image 536.png';
 import butterflyEffect from '/public/assets/Butterfly-Effect.svg';
+import { ArrowUpRight } from 'lucide-react';
 
 const Home = () => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
     <div className="container mx-auto p-4">
       {/* Navigation */}
@@ -59,10 +62,21 @@ const Home = () => {
         </div>
 
         {/* Right Panel */}
-        <div className="border-2 border-[#161616] rounded-[20px] flex flex-col gap-6 p-6">
+        <div className="rounded-[20px] flex flex-col gap-6 ">
           {/* Book Tickets Button */}
-          <button className="w-full bg-[#BB000E] text-[#FAFAFA] text-[47px] font-avantgarde p-4 rounded-[20px] border-3 border-[#161616] shadow-[inset_0px_0px_14px_rgba(227,28,37,0.60)]">
+          <button 
+            className={`border-[3px] flex items-center justify-center w-full bg-[#BB000E] text-[#FAFAFA] text-[47px] font-avantgarde p-6 rounded-[20px] 
+            ${isHovered
+              ? "bg-white text-black border-[#BB000E] shadow-[inset_0px_0px_14px_rgba(0,0,0,0.6)]"
+              : "bg-[#BB000E] text-[#FAFAFA] border-[#161616] shadow-[inset_0px_0px_14px_rgba(227,28,37,0.60)]"
+            }`}
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+          >
             BOOK TICKETS
+            <ArrowUpRight
+              className={`w-12 h-12 transition-all duration-300 ease-in-out ${isHovered ? "rotate-45" : "rotate-22"}`}
+            />
           </button>
 
           {/* Date Display */}
