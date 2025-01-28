@@ -1,5 +1,5 @@
 import Lottie from 'lottie-react';
-import dateLottie from './assets/Date Lottie.json';
+import dateLottie from '../public/assets/Date Lottie.json';
 
 function App() {
   return (
@@ -12,11 +12,11 @@ function App() {
         </div>
         <div className="flex gap-4">
           {['About', 'Speakers', 'Team', 'Contact'].map((item) => (
-            <button key={item} className="px-6 py-2 border border-[#161616] rounded-[20px] text-[#161616] text-[29px] font-avantgarde">
+            <button key={item} className="px-6 py-1 border border-[#161616] rounded-[20px] text-[#161616] text-[29px] font-avantgarde">
               {item}
             </button>
           ))}
-          <button className="px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-[29px] font-avantgarde">
+          <button className="px-6 py-1 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-[29px] font-avantgarde">
             Book Tickets
           </button>
         </div>
@@ -27,7 +27,7 @@ function App() {
         <div className="bg-[#161616] rounded-[20px] px-8 relative">
           <div className="relative h-[288px]">
             <img 
-              src="src/assets/Butterfly-Effect.svg" 
+              src="/assets/Butterfly-Effect.svg" 
               alt="Butterfly Effect"
               className="w-full h-full object-contain"
             />
@@ -41,15 +41,23 @@ function App() {
         <div className="border-2 border-[#161616] rounded-[20px] p-12" />
 
         {/* Center Panel */}
-        <div className="border-2 border-[#161616] rounded-[20px] overflow-hidden relative">
-          <img className="w-[375px] h-[375px] mx-auto mt-7 mix-blend-darken" src="src\assets\image 535.png" alt="" />
-          <img className="w-[375px] h-[375px] mx-auto mt-7 opacity-50 mix-blend-multiply absolute top-0" src="src\assets\image 536.png" alt="" />
+        <div className="border-2 border-[#161616] rounded-[20px] overflow-hidden relative flex items-center justify-center">
+          <img 
+            className="w-[375px] h-[375px]  mx-auto mt-7 mix-blend-darken" 
+            src="/assets/image 535.png" 
+            alt="" 
+          />
+          <img 
+            className="w-[375px] h-[375px]  mx-auto mt-7 opacity-50 mix-blend-multiply absolute" 
+            src="/assets/image 536.png" 
+            alt="" 
+          />
         </div>
 
         {/* Right Panel */}
         <div className="border-2 border-[#161616] rounded-[20px] flex flex-col gap-6 p-6">
           {/* Book Tickets Button */}
-          <button className="w-full bg-[#BB000E] text-[#FAFAFA] text-[47px] font-avantgarde p-6 rounded-[20px] border-3 border-[#161616] shadow-[inset_0px_0px_14px_rgba(227,28,37,0.60)]">
+          <button className="w-full bg-[#BB000E] text-[#FAFAFA] text-[47px] font-avantgarde p-4 rounded-[20px] border-3 border-[#161616] shadow-[inset_0px_0px_14px_rgba(227,28,37,0.60)]">
             BOOK TICKETS
           </button>
 
