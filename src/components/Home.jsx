@@ -10,7 +10,7 @@ const Home = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="container mx-auto p-20">
+    <div className="container mx-auto p-10">
       {/* Navigation */}
       <nav className="flex justify-between items-center gap-6 mb-8">
         <div className="flex items-center">
