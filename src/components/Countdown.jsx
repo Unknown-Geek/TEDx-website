@@ -86,7 +86,7 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="container mx-auto pt-20 px-10">
+    <div className="container mx-auto pt-20 px-20">
         {/* Countdown Timer */}
       <div className="w-full pt-[29px] px-2 mb-8 bg-[rgba(250,250,250,0.50)] rounded-[20px] border-[5px] border-[#E31C25] backdrop-blur-[6.4px] flex justify-center items-center gap-2">
         <TimerUnit value={timeLeft.days} label="Days" />
