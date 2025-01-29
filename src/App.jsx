@@ -2,6 +2,7 @@ import Home from './components/Home';
 import Countdown from './components/Countdown';
 import { Analytics } from "@vercel/analytics/react";
 import { About } from './components/About';
+import Footer from './components/Footer';
 import "./styles/ScrollingText.css"
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
       <Home />
       <Countdown />
       <Analytics />
-      <About  />
+      <About />
+      <Footer />
     </div>
   );
 }
