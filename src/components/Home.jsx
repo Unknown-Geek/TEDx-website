@@ -25,12 +25,12 @@ const Home = () => {
           {["About", "Speakers", "Team", "Contact"].map((item) => (
             <button
               key={item}
-              className="px-6 py-1 border border-[#161616] rounded-[20px] text-[#161616] text-[29px] font-avantgarde"
+              className="px-6 py-1 border border-[#161616] rounded-[20px] text-[#161616] text-[29px] font-avantgarde hover:bg-[#BB000E] hover:text-[#FAFAFA]"
             >
               {item}
             </button>
           ))}
-          <button className="px-6 py-1 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-[29px] font-avantgarde">
+          <button className="px-6 py-1 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-[29px] font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]">
             Book Tickets
           </button>
         </div>
