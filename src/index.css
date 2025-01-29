@@ -53,3 +53,8 @@
     font-family: 'AvantGarde';
     src: url('./fonts/AvantGarde.ttf') format('truetype');
 }
+
+@font-face {
+    font-family: 'Helvetica Compressed';
+    src: url('./fonts/Helvetica-Compressed.otf') format('truetype');
+}
