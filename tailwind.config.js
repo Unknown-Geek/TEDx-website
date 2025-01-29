@@ -10,8 +10,10 @@ module.exports = {
         'vanguard': ['Vanguard', 'sans-serif'],
         'microgramma': ['Microgramma', 'sans-serif'],
         'avantgarde': ['AvantGarde', 'sans-serif'],
-      },
-    },
+      }
+     
+      
+    
   },
-  plugins: [],
-}
+  plugins: [require("tailwindcss-animate")],
+}}
