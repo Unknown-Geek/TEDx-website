@@ -1,5 +1,6 @@
 import React from "react";
 import SocialIcons from "./SocialIcons";
+import GoogleMapReact from 'google-map-react';
 
 const SocialIcon = ({ children }) => (
   <div
@@ -267,6 +268,7 @@ const Footer = () => {
           style={{
             width: 378.13,
             borderRadius: 20,
+            height: 434,
             overflow: "hidden",
             border: "2px #161616 solid",
             display: "flex",
@@ -275,7 +277,9 @@ const Footer = () => {
             alignItems: "center",
           }}
         >
-          <img src="" alt="Placeholder" />
+          <GoogleMapReact defaultCenter={{ lat: 8.545884830720146, lng: 76.90634321026491 }} defaultZoom={11} bootstrapURLKeys={{ key: "AIzaSyC8Nk_5APibqxRWHClK0-xBMrCxqWrGIws" }}/>
+      
+
         </div>
       </div>
       <div style={{ left: 607, top: 615, position: "absolute" }}>
@@ -323,7 +327,7 @@ const Footer = () => {
       </div>
       <div
         style={{
-          width: 1440,
+          width: 1600,
           height: 0,
           left: 0,
           top: 597,
@@ -333,7 +337,7 @@ const Footer = () => {
       ></div>
       <div
         style={{
-          width: 1440,
+          width: 1600,
           height: 0,
           left: 0,
           top: 549,
@@ -355,6 +359,7 @@ const Footer = () => {
       >
         <div
           style={{
+            paddingLeft: 40,
             color: "#161616",
             fontSize: 29,
             fontFamily: "AvantGarde",
@@ -362,14 +367,13 @@ const Footer = () => {
             wordWrap: "break-word",
           }}
         >
-          TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx
-          CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET
-          - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET
+          - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx
+          CET - TEDx CET - TEDx CET - TEDx CET -
         </div>
       </div>
       <div
         style={{
-          width: 1440,
+          width: 1600,
           height: 0,
           left: 0,
           top: 66,
@@ -379,7 +383,7 @@ const Footer = () => {
       ></div>
       <div
         style={{
-          width: 1440,
+          width: 1600,
           height: 0,
           left: 0,
           top: 15,
@@ -405,12 +409,12 @@ const Footer = () => {
             fontSize: 29,
             fontFamily: "AvantGarde",
             fontWeight: "400",
-            wordWrap: "break-word",
+
           }}
         >
-          TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx
-          CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET
-          - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET
+          - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx CET - TEDx
+          CET -  TEDx CET - TEDx
+          CET -  TEDx CET -
         </div>
       </div>
     </div>

@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 
 // Configure event date - Using Date object directly for better timezone handling
-const EVENT_DATE = new Date(2025, 2, 23, 9, 0, 0); // March 23, 2025, 9:00 AM
+const EVENT_DATE = new Date(2025, 2, 19, 9, 0, 0); // March 23, 2025, 9:00 AM
 
 const TimerUnit = ({ value, label }) => (
   <div className="p-2 flex flex-col justify-center items-center">
-    <div className="text-[123px] font-microgramma font-bold text-[#161616] leading-[75px]">
+    <div className="text-[115px] font-microgramma font-bold text-[#161616] leading-[75px]">
       {value.toString().padStart(2, '0')}
     </div>
     <div className="text-[47px] font-vanguard font-normal text-[#161616] leading-[75px] tracking-[2.35px]">
