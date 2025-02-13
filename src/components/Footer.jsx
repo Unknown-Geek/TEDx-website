@@ -30,17 +30,17 @@ const Footer = () => {
   return (
     <div className=" w-screen h-full">  
         <div className="border-y-2 border-[#161616] overflow-hidden h-10 ">
-        <ScrollingText className="w-full h-full overflow-hidden" direction="left" />
+        <ScrollingText className="w-full h-full overflow-hidden" direction="right" />
         </div>
 
-      <div className=" pt-20 flex flex-col space-y-4 lg:flex-row lg:justify-center lg:items-center lg:gap-20 lg:w-[1536px] lg:h-[433px] lg:left-[152px] lg:top-[91px] mx-auto ">
+      <div className="gap-20 w-[330px] pt-20 flex flex-col space-y-4 lg:flex-row lg:justify-center lg:items-center lg:gap-20 lg:w-[1536px] lg:h-[433px] lg:left-[152px] lg:top-[91px] mx-auto ">
         
-        <div className=" flex flex-col justify-center items-center w-full h[400px] lg:w-full lg:h-[484px] rounded-[20px] overflow-hidden border-2 border-[#161616]">
-          <div>
-          <div className="pl-7 pt-3 h-[200px] w-[350px] lg:mb-2  lg:w-[400px] lg:h-[210px] text-center text-[#E31C25] text-[113px] font-bold font-vanguard overflow-hidden ">
+        <div className=" flex flex-col justify-center items-center  h[400px] lg:w-full lg:h-[484px] rounded-[20px] overflow-hidden border-2 border-[#161616]">
+          <div className="lg:flex lg:flex-col flex flex-col">
+          <div className="h-[150px] pl-2 pt-3 lg:mb-2  lg:w-[400px] lg:h-[160px] text-center text-[#E31C25] text-[113px] font-bold font-vanguard overflow-hidden ">
             CONNECT
           </div>
-          <div className="pl-7 h-[120px] lg:-mt-10  text-center text text-[#161616] text-[76px] font-bold font-[Vanguard] lg:h-[120px] ">
+          <div className="pl-2 h-[160px] lg:-mt-10  text-center text text-[#161616] text-[76px] font-bold font-[Vanguard] lg:h-[160px] ">
             WITH US ON
           </div>
           </div>
@@ -60,14 +60,14 @@ const Footer = () => {
             AKHILJITH -
           </div>
           <div className=" left-[87px] top-[265px] text-right text-[#FAFAFA] text-[29px] font-bold font-[Microgramma]">
-             <span className="pr-20 text-[#E31C25]">7907982102</span>
+             <span className="pr-25 lg:pr-20 text-[#E31C25]">7907982102</span>
           </div>
           <div className="pl-6 left-[46px] top-[309px] text-[#FAFAFA] text-[29px] font-bold font-[Microgramma]">
             EPHREM -
           </div>
          
           <div className=" left-[90px] top-[338px] text-right text-[#FAFAFA] text-[29px] font-bold font-[Microgramma]">
-            <span className="pr-20 text-[#E31C25]">9447434346</span>
+            <span className="pr-30 lg:pr-20 text-[#E31C25]">9447434346</span>
           </div>
         </div>
 
@@ -84,7 +84,7 @@ const Footer = () => {
       <div className=" h-[90px] w-screen border-1 border-[#161616] top-[15px]"></div>
 
         <div className="border-y-2 border-[#161616] overflow-hidden h-10 ">
-             <ScrollingText className="w-full h-full overflow-hidden" direction="right" />
+             <ScrollingText className="w-full h-full overflow-hidden" direction="left" />
         </div>           
       <div className=" justify-center items-center *:p-35 h-[100px] pt-5">
         <div className="justify-center items-center left-[45px] top-[2px] flex flex-row">
