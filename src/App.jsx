@@ -8,10 +8,7 @@ import "./styles/ScrollingText.css"
 function App() {
   return (
     <div className='flex flex-col items-center justify-center gap-12'>
-      <Home />
-      <Countdown />
-      <Analytics />
-      <About />
+      <About/>
       <Footer />
     </div>
   );
