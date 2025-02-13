@@ -7,6 +7,7 @@ import image535 from "/public/assets/image 535.png"
 import image536 from "/public/assets/image 536.png"
 import butterflyEffect from "/public/assets/Butterfly-Effect.svg"
 import { ArrowUpRight, Menu } from "lucide-react"
+import  video from "/public/assets/video.mp4"
 
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false)
@@ -91,10 +92,12 @@ const Home = () => {
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {/* Left Panel */}
-        <div className="border-2 border-[#161616] rounded-[20px] p-4 sm:p-6 md:p-8 lg:p-12" />
+        <div className="border-2 border-[#161616] rounded-[20px]  " >
+          <video src={video} autoPlay loop muted playsInline className="w-full h-full object-cover rounded-[16px]"></video>
+          </div>
 
         {/* Center Panel */}
-        <div className="border-2 border-[#161616] rounded-[20px] overflow-hidden relative flex items-center justify-center h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]">
+        <div className="border-2 border-[#161616] rounded-[20px] overflow-hidden relative flex items-center justify-center h-[250px] sm:h-[300px] md:h-[350px] lg:h-[450px]">
           <img
             className="w-full h-full object-contain mix-blend-darken"
             src={image535 || "/placeholder.svg"}
@@ -108,7 +111,7 @@ const Home = () => {
         </div>
 
         {/* Right Panel */}
-        <div className="rounded-[20px] flex flex-col gap-4 md:gap-6  md:col-span-2 lg:col-span-1">
+        <div className="rounded-[20px] flex flex-col gap-4 md:gap-6  md:col-span-2 lg:col-span-1 ">
           {/* Book Tickets Button */}
           <button
             className={`w-full text-4xl min-w-[200px] sm:min-w-[160px] whitespace-nowrap 
@@ -130,7 +133,7 @@ sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-avantgarde p-4  rounded-[20
           </button>
 
           {/* Date Display */}
-          <div className="bg-[#161616] rounded-[20px] h-[200px] sm:h-[250px] md:h-[297px] flex justify-center items-center">
+          <div className="bg-[#161616] rounded-[20px] h-[200px] sm:h-[250px] md:h-[325px] flex justify-center items-center">
             <Lottie animationData={dateLottie} className="w-full h-full" />
           </div>
         </div>
