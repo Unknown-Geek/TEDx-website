@@ -1,9 +1,10 @@
 .scrolling-text-container {
-  width: 100%;
+  display: flex;
+  justify-content: center; /* Centers the text */
+  align-items: center;
   height: 100%;
-  overflow: hidden;
   position: relative;
-}
+  width: 100%;}
 
 .scrolling-text {
   position: absolute;
@@ -15,13 +16,17 @@
 
   
 }
+.scrolling-text::after {
+  content: attr(data-text); /* Duplicate text */
+  padding-left: 2rem; /* Add spacing */
+}
 
 .scrolling-text.left {
-  animation: scrollLeft 20s linear infinite;
+  animation: scrollLeft 40s linear infinite;
 }
 
 .scrolling-text.right {
-  animation: scrollRight 20s linear infinite;
+  animation: scrollRight 40s linear infinite;
 }
 
 .scrolling-text.up {
