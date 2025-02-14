@@ -30,10 +30,10 @@ export const About = () => {
   ];
 
   return (
-    <div className="flex flex-col lg:flex-row w-full min-h-screen border-[#161616] border-2 overflow-hidden" >
+    <div id="about" className="flex flex-col lg:flex-row w-full min-h-screen lg:h-screen border-[#161616] border-2 overflow-hidden" >
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full h-full lg:min-h-screen">
         {/* Left Section */}
-        <div className="  w-full bg-[#161616] flex-1 gap-7  items-start px-10 sm:pl-16 lg:pl-28   min-h-screen pb-20
+        <div className="  w-full bg-[#161616] flex-1 gap-7 h-full  items-start px-10 sm:pl-16 lg:pl-28   min-h-screen pb-20
          lg:mb-0 overflow-hidden">
           <div className="flex flex-col gap-4 lg:mt-4 items-center lg:items-start ">
             <div className="mb-4 text-8xl sm:text-8xl lg:text-9xl text-[#fafafa] font-vanguard leading-tight lg:leading-[148px] font-extrabold">
@@ -51,16 +51,16 @@ export const About = () => {
           </div>
         </div>
         {/* Middle Section */}
-        <div className="flex flex-col lg:flex-row w-[100%] lg:w-20 h-[80px] lg:h-screen items-center justify-center flex-shrink-0">
-          <div className="w-[100%] lg:w-[15%] lg:min-h-screen flex-1 flex  bg-[#161616] border-[#fafafa] border-t-2 lg:border-l-2 lg:border-t-0 overflow-hidden items-center justify-center">
-            <ScrollingText className="lg:min-w-screen  lg:transform lg:-rotate-90 " dark direction="left" />
+        <div className="flex flex-col lg:flex-row w-[100%] lg:w-[5vw] h-[80px] lg:h-[100vh] items-center justify-center  ">
+          <div className="w-[100%] lg:w-[15vw] lg:min-h-full flex-1 flex flex-shrink-0  bg-[#161616] border-[#fafafa] border-t-2 lg:border-l-2 lg:border-t-0 overflow-hidden items-center justify-center">
+            <ScrollingText className="lg:min-w-screen  lg:transform flex-shrink-0 lg:-rotate-90 min-h-full " dark direction="left" />
           </div>
-          <div className="w-[100%] lg:w-[15%] lg:h-screen flex-1 flex border-[#161616] bg-[#fafafa] border-b-2 lg:border-r-2 lg:border-b-0 overflow-hidden items-center justify-center">
-            <ScrollingText className="lg:min-w-screen  lg:transform lg:-rotate-90 " direction="right" />
+          <div className="w-[100%] lg:w-[15vw] lg:min-h-full flex-1 flex  flex-shrink-0 border-[#161616] bg-[#fafafa] border-b-2 lg:border-r-2 lg:border-b-0 overflow-hidden items-center justify-center">
+            <ScrollingText className="lg:min-w-screen  lg:transform lg:-rotate-90 flex-shrink-0 lg:h-full" direction="right" />
           </div>
         </div>
         {/* Right Section (Stats) */}
-        <div className="flex-1 items-center justify-center p-6 lg:p-14 bg-[#FAFAFA]">
+        <div className="flex-1 h-full items-center justify-center p-6 lg:p-14 bg-[#FAFAFA]">
           <div className="flex flex-col items-center justify-center w-full max-w-[600px] gap-4 lg:gap-4">
             {stats.map((stat, index) => (
               <React.Fragment key={index}>

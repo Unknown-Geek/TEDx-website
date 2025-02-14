@@ -13,7 +13,7 @@ const Home = () => {
   const [isHovered, setIsHovered] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const navItems = ["About", "Speakers", "Team", "Contact"]
+  const navItems = [{item:"About",href:"#about"}, {item:"Speakers",href:"#speakers"},{item:"Team",href:"#team"},{item:"Contact",href:"#contact"}]
 
   return (
     <div className="container mx-auto p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20">
@@ -28,14 +28,11 @@ const Home = () => {
           </span>
         </div>
         <div className="hidden md:flex gap-2 lg:gap-4">
-          {navItems.map((item) => (
-            <button
-              key={item}
-              className="px-3 sm:px-4 md:px-6 py-2 border border-[#161616] rounded-[20px] text-[#161616] text-sm lg:text-3xl  font-avantgarde hover:bg-[#BB000E] hover:text-[#FAFAFA]"
-            >
-              {item}
-            </button>
-          ))}
+        {navItems.map((item) => (
+    <a key={item.item} href={item.href} className="px-3 sm:px-4 md:px-6 py-2 border border-[#161616] rounded-[20px] text-[#161616] text-sm lg:text-3xl font-avantgarde hover:bg-[#BB000E] hover:text-[#FAFAFA]">
+      {item.item}
+    </a>
+))}
           <button className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-sm lg:text-3xl  font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]">
             Book Tickets
           </button>
@@ -57,15 +54,11 @@ const Home = () => {
             </button>
           </div>
           <div className="flex flex-col space-y-4 mt-8">
-            {navItems.map((item) => (
-              <button
-                key={item}
-                className="px-3 py-2 border border-[#161616] rounded-[20px] text-[#161616] text-xl font-avantgarde hover:bg-[#BB000E] hover:text-[#FAFAFA]"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                {item}
-              </button>
-            ))}
+          {navItems.map((item) => (
+    <a key={item.item} href={item.href} className="px-3 sm:px-4 md:px-6 py-2 border border-[#161616] rounded-[20px] text-[#161616] text-sm lg:text-3xl font-avantgarde hover:bg-[#BB000E] hover:text-[#FAFAFA]">
+      {item.item}
+    </a>
+))}
             <button
               className="px-3 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-xl font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]"
               onClick={() => setIsMobileMenuOpen(false)}

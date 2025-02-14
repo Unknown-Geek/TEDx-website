@@ -28,7 +28,7 @@ const SocialIcon = ({ children }) => (
 
 const Footer = () => {
   return (
-    <div className=" w-screen h-full">  
+    <div id="contact" className=" w-screen h-full">  
         <div className="border-y-2 border-[#161616] overflow-hidden h-10 ">
         <ScrollingText className="w-full h-full overflow-hidden" direction="right" />
         </div>
