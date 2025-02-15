@@ -6,6 +6,8 @@ import Footer from './components/Footer';
 import "./styles/ScrollingText.css"
 import SpeakersList from './components/SpeakersList';
 import SpeakersTitle from './components/SpeakersTitle';
+import PreviousSpeakers from './components/PreviousSpeakers';
+import PreviousSpeakersTitle from './components/PreviousSpeakersTitle';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
       <About />
       <SpeakersTitle/>
       <SpeakersList />
+      <PreviousSpeakersTitle/>
+      <PreviousSpeakers/>
       <Footer />
     </div>
   );
