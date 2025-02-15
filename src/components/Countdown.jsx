@@ -39,14 +39,14 @@ const HurryUpAnimation = () => {
   return (
     <div className="relative w-full h-[60px] sm:h-[80px] md:h-[100px] lg:h-[123px] flex justify-center">
       <img
-        src="../public/assets/Hurry Up 1.svg"
+        src="/assets/hurry1.svg"
         alt="Hurry Up"
         className={`absolute h-full object-contain transition-all duration-200 ease-in-out ${
           isFirstImage ? 'opacity-100' : 'opacity-0'
         }`}
       />
       <img
-        src="../public/assets/Hurry Up 2.svg"
+        src="/assets/hurry2.svg"
         alt="Hurry Up"
         className={`absolute h-full object-contain transition-all duration-200 ease-in-out ${
           !isFirstImage ? 'opacity-100' : 'opacity-0'
