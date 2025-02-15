@@ -1,1 +1,1 @@
-https://tedx-website-seven.vercel.app
+Hosted on https://www.tedxcet.in
