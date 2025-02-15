@@ -33,7 +33,7 @@ export const About = () => {
     <div id="about" className="flex flex-col lg:flex-row w-full min-h-screen lg:h-screen border-[#161616] border-2 overflow-hidden" >
       <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center w-full h-full lg:min-h-screen">
         {/* Left Section */}
-        <div className="  w-full bg-[#161616] flex-1 gap-7 h-full  items-start px-10 sm:pl-16 lg:pl-28   min-h-screen pb-20
+        <div className="  w-full bg-[#161616] flex-1 gap-7 h-full  items-start px-10 sm:pl-16 lg:pl-28  lg:px-4 min-h-screen pb-20 
          lg:mb-0 overflow-hidden">
           <div className="flex flex-col gap-4 lg:mt-4 items-center lg:items-start ">
             <div className="mb-4 text-8xl sm:text-8xl lg:text-9xl text-[#fafafa] font-vanguard leading-tight lg:leading-[148px] font-extrabold">
@@ -45,8 +45,8 @@ export const About = () => {
               around the theme "Kaleidoscope: Alchemy of Voices," offers a blend of live talks and curated videos
               designed to spark thought-provoking conversations. TEDxCUSAT goes beyond the traditional format of talks;
               it’s about creating a space where ideas can be transformed into actions that lead to real-world impact. Our
-              goal is to make these ideas accessible and to inspire our community to turn them into catalysts for
-              positive change.
+              goal is to make these ideas accessible and to inspire our community to 
+            
             </p>
           </div>
         </div>

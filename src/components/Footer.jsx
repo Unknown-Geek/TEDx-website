@@ -4,6 +4,7 @@ import GoogleMapReact from 'google-map-react';
 import { Copyright } from 'lucide-react'
 import {ScrollingText} from './About'
 import "../styles/ScrollingText.css";
+import logo2 from "/public/assets/Logo-Black.png"
 // Use it in your component
  // This will make it 40x40px to match your SVG
 const SocialIcon = ({ children }) => (
@@ -28,7 +29,7 @@ const SocialIcon = ({ children }) => (
 
 const Footer = () => {
   return (
-    <div id="contact" className=" w-screen h-full">  
+    <div className=" w-screen h-full">  
         <div className="border-y-2 border-[#161616] overflow-hidden h-10 ">
         <ScrollingText className="w-full h-full overflow-hidden" direction="right" />
         </div>
@@ -86,12 +87,17 @@ const Footer = () => {
         <div className="border-y-2 border-[#161616] overflow-hidden h-10 ">
              <ScrollingText className="w-full h-full overflow-hidden" direction="left" />
         </div>           
-      <div className=" justify-center items-center *:p-35 h-[100px] pt-5">
-        <div className="justify-center items-center left-[45px] top-[2px] flex flex-row">
+      <div className=" flex items-center justify-center  *:p-35 h-[100px] pt-5 text-3xl font-bold">
+        {/* <div className="justify-center items-center left-[45px] top-[2px] flex flex-row">
            <Copyright className="w-10 h-16 " />
           <div className="text-[#E31C25] text-6xl font-bold font-[Vanguard] pl-4">TED</div>
-          <div className="text-[#161616] text-6xl font-bold font-[Vanguard]">x CET</div>
-        </div>
+          <div className="text-[#161616] text-6xl font-bold font-[Vanguard]">x CET</div> */}
+          ©<img
+                      className=" p-3 w-[170px] h-[50px]"
+                      src={logo2 || "/placeholder.svg"}
+                      alt="Design element 2"
+                    />
+        
              
       </div>
     </div>

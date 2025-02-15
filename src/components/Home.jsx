@@ -8,6 +8,7 @@ import image536 from "/public/assets/image 536.png"
 import butterflyEffect from "/public/assets/Butterfly-Effect.svg"
 import { ArrowUpRight, Menu } from "lucide-react"
 import  video from "/public/assets/video.mp4"
+import logo from "/public/assets/Logo-White.png"
 
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false)
@@ -19,13 +20,12 @@ const Home = () => {
     <div className="container mx-auto p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20">
       {/* Navigation */}
       <nav className="flex justify-between items-center gap-4 mb-6 md:mb-8">
-        <div className="flex items-center">
-          <span className="text-[#E31C25] text-2xl sm:text-3xl md:text-4xl lg:text-[47px] font-vanguard font-bold">
-            TED
-          </span>
-          <span className="text-[#161616] text-2xl sm:text-3xl md:text-4xl lg:text-[47px] font-vanguard font-bold">
-            x CET
-          </span>
+      <div className="flex items-center justify-center  bg-[#161616] rounded-[12px] w-[180px] ">
+          <img
+            className="p-3 w-[170px] h-[50px]"
+            src={logo || "/placeholder.svg"}
+            alt="Design element 2"
+          />
         </div>
         <div className="hidden md:flex gap-2 lg:gap-4">
         {navItems.map((item) => (
