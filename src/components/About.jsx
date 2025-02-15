@@ -53,7 +53,7 @@ export const About = () => {
           </div>
         </div>
         {/* Right Section (Stats) */}
-        <div className="w-full lg:w-1/2 flex items-center justify-center p-6 lg:p-14 bg-[#FAFAFA]">
+        <div className="w-full lg:w-1/2 lg:h-screennpflex items-center justify-center p-6 lg:p-14 bg-[#FAFAFA]">
           <div className="flex flex-col items-center justify-center w-full max-w-[600px] gap-4 lg:gap-6">
             {stats.map((stat, index) => (
               <React.Fragment key={index}>
