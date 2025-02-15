@@ -4,6 +4,8 @@ import { Analytics } from "@vercel/analytics/react";
 import { About } from './components/About';
 import Footer from './components/Footer';
 import "./styles/ScrollingText.css"
+import SpeakersList from './components/SpeakersList';
+import SpeakersTitle from './components/SpeakersTitle';
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Countdown />
       <Analytics />
       <About />
+      <SpeakersTitle/>
+      <SpeakersList />
       <Footer />
     </div>
   );
