@@ -75,9 +75,10 @@ const Footer = () => {
         <div className=" w-full h-[484px] rounded-[20px] overflow-hidden border-2 border-[#161616] flex flex-col justify-start items-center">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.5204101451295!2d76.90376577501328!3d8.545851291497474!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bec79541c519%3A0x98324eb5aafb3778!2sCollege%20of%20Engineering%20Trivandrum%20(CET)!5e0!3m2!1sen!2sin!4v1739653118757!5m2!1sen!2sin"
-            width="480"
-            height="480"
-            style={{ border: 0 }}
+            // width="480"
+            // height="480"
+            // style={{ border: 0 }}
+            className=" md:h-[480px] md:w-[450px] border-0 h-[600px] w-[330px] "
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
