@@ -9,6 +9,10 @@ import SpeakersTitle from './components/SpeakersTitle';
 import PreviousSpeakers from './components/PreviousSpeakers';
 import PreviousSpeakersTitle from './components/PreviousSpeakersTitle';
 import Ticket from './components/Ticket';
+import Highlights_title from './components/Highlights_title';
+import Highlights from './components/Highlights';
+import Highlights_text from './components/Highlights_text';
+
 
 function App() {
   return (
@@ -21,6 +25,9 @@ function App() {
       <SpeakersList />
       <PreviousSpeakersTitle/>
       <PreviousSpeakers/>
+      <Highlights_title/>
+      <Highlights/>
+      <Highlights_text/>
       <Ticket />
       <Footer />
     </div>
