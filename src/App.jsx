@@ -8,6 +8,7 @@ import SpeakersList from './components/SpeakersList';
 import SpeakersTitle from './components/SpeakersTitle';
 import PreviousSpeakers from './components/PreviousSpeakers';
 import PreviousSpeakersTitle from './components/PreviousSpeakersTitle';
+import Ticket from './components/Ticket';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <SpeakersList />
       <PreviousSpeakersTitle/>
       <PreviousSpeakers/>
+      <Ticket />
       <Footer />
     </div>
   );

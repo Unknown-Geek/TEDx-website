@@ -80,7 +80,7 @@ const SpeakersList = () => {
     };
 
     return (
-        <div className="min-h-screen w-full flex items-center justify-center px-4 py-32 md:py-24 bg-[#161616]">
+        <div id="speakers" className="min-h-screen w-full flex items-center justify-center px-4 py-32 md:py-24 bg-[#161616]">
             <div className="relative w-full max-w-7xl mx-auto">
                 {/* Navigation Buttons */}
                 <button

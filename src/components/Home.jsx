@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Lottie from "lottie-react"
-import dateLottie from "/public/assets/Date Lottie.json"
+import dateLottie from "/public/assets/Date-Lottie.json"
 import image535 from "/public/assets/image 535.png"
 import image536 from "/public/assets/image 536.png"
 import butterflyEffect from "/public/assets/Butterfly-Effect.svg"
@@ -33,9 +33,9 @@ const Home = () => {
       {item.item}
     </a>
 ))}
-          <button className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-sm lg:text-3xl  font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]">
+          <a href="#ticket" className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-sm lg:text-3xl  font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]">
             Book Tickets
-          </button>
+          </a>
         </div>
         <button
           className="md:hidden p-2 border border-[#161616] rounded-md"
@@ -127,7 +127,7 @@ sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-avantgarde p-4  rounded-[20
 
           {/* Date Display */}
           <div className="bg-[#161616] rounded-[20px] h-[200px] sm:h-[250px] md:h-[325px] flex justify-center items-center">
-            <Lottie animationData={dateLottie} className="w-full h-full" />
+            <Lottie animationData={dateLottie}  />
           </div>
         </div>
       </div>
