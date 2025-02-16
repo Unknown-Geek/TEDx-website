@@ -15,7 +15,7 @@ export const ScrollingText = ({ className = "", dark = false, direction = "left"
         {repeatedText}
         {repeatedText}
         {repeatedText}
-         {/* Render text multiple times to prevent gaps */}
+        {/* Render text multiple times to prevent gaps */}
       </div>
     </div>
   );
@@ -39,14 +39,12 @@ export const About = () => {
             <div className="mb-4 text-8xl sm:text-8xl lg:text-9xl text-[#fafafa] font-vanguard leading-tight lg:leading-[148px] font-extrabold">
               ABOUT
             </div>
-            <p className="w-full max-w-[99%] md:max-w-[510px] text-xl md:text-3xl text-[#fafafa] font-avantgarde leading-[1.8rem] sm:leading-[2.2rem] tracking-wide text-center lg:text-left">
-              TEDxCUSAT is a dynamic platform where the brightest minds of Cochin University of Science And Technology
-              come together to share ideas that have the power to inspire meaningful change. This year's event, centered
-              around the theme "Kaleidoscope: Alchemy of Voices," offers a blend of live talks and curated videos
-              designed to spark thought-provoking conversations. TEDxCUSAT goes beyond the traditional format of talks;
-              it’s about creating a space where ideas can be transformed into actions that lead to real-world impact. Our
-              goal is to make these ideas accessible and to inspire our community to 
-            
+            <p className="w-full max-w-[99%] md:max-w-[630px] text-lg md:text-3xl text-[#fafafa] font-avantgarde leading-[1.8rem] sm:leading-[2.2rem] tracking-wide text-center lg:text-left">
+              TEDxCET is a locally organised independently run event. Rooted in the spirit of TED’s mission, it brings together thought leaders, innovators, and changemakers to share ideas worth spreading.
+              At our illustrious event “ The Millenium” on 23rd February 2019, we curated a lineup of dynamic speakers such as Manju Sara Rajan, Sumesh Mangalassey, Nkihiya Shamsher,  Sreejesh Nair, Valmakry and P Radhakrishnan.
+              Our next step was a “Paradigm Shift”. On May 6, 2023, we witnessed the remarkable and intriguing summit of distinctive personalities like Dr. Sulphi Noohu , Anjana Gopakumar, Neeraj Madhav ,Shubhi Agarwal and Manoj Raghavan.
+              Let’s look forward to 8th March 2024, as we celebrate the power of storytelling with the theme "Butterfly Effect".
+
             </p>
           </div>
         </div>
@@ -61,7 +59,7 @@ export const About = () => {
         </div>
         {/* Right Section (Stats) */}
         <div className="flex-1 h-full items-center justify-center p-6 lg:p-14 bg-[#FAFAFA]">
-          <div className="flex flex-col items-center justify-center w-full max-w-[600px] gap-4 lg:gap-4">
+          <div className="flex flex-col items-center justify-center w-full max-w-[600px] gap-5 lg:gap-1">
             {stats.map((stat, index) => (
               <React.Fragment key={index}>
                 <div className="flex flex-col items-center justify-center">
