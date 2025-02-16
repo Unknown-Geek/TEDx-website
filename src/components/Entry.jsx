@@ -69,11 +69,11 @@ export default function Entry({ onScrollUp }) {
         Your browser does not support the video tag.
       </video>
 
-      {/* Scroll-Up Icon (Centered at Bottom) */}
+      {/* Scroll-Up Icon (Perfectly Centered at Bottom) */}
       <AnimatePresence>
         {videoEnded && (
           <motion.div
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-center cursor-pointer"
+            className="absolute bottom-10 left-0 w-full flex justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
