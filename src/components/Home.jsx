@@ -33,7 +33,7 @@ const Home = () => {
       {item.item}
     </a>
 ))}
-          <button className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-sm lg:text-3xl  font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]">
+          <a href="#ticket"className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-sm lg:text-3xl  font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]">
             Book Tickets
           </a>
         </div>
@@ -64,12 +64,12 @@ const Home = () => {
                 {item.item}
               </a>
             ))}
-            <button
+            <a href="#ticket"
               className="px-3 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-xl font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               Book Tickets
-            </button>
+            </a>
           </div>
         </div>
       )}
