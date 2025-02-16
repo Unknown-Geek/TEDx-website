@@ -7,20 +7,20 @@ import image535 from "/public/assets/image 535.png"
 import image536 from "/public/assets/image 536.png"
 import butterflyEffect from "/public/assets/Butterfly-Effect.svg"
 import { ArrowUpRight, Menu } from "lucide-react"
-import  video from "/public/assets/video.mp4"
+import video from "/public/assets/video.mp4"
 import logo from "/public/assets/Logo-White.png"
 
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const navItems = [{item:"About",href:"#about"}, {item:"Speakers",href:"#speakers"},{item:"Team",href:"#team"},{item:"Contact",href:"#contact"}]
+  const navItems = [{ item: "About", href: "#about" }, { item: "Speakers", href: "#speakers" }, { item: "Team", href: "#team" }, { item: "Contact", href: "#contact" }]
 
   return (
     <div className="container mx-auto p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20">
       {/* Navigation */}
       <nav className="flex justify-between items-center gap-4 mb-6 md:mb-8">
-      <div className="flex items-center justify-center  bg-[#161616] rounded-[12px] w-[180px] ">
+        <div className="flex items-center justify-center  bg-[#161616] rounded-[12px] w-[180px] ">
           <img
             className="p-3 w-[170px] h-[50px]"
             src={logo || "/placeholder.svg"}
@@ -33,7 +33,7 @@ const Home = () => {
       {item.item}
     </a>
 ))}
-          <a href="#ticket" className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-sm lg:text-3xl  font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]">
+          <button className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-sm lg:text-3xl  font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]">
             Book Tickets
           </a>
         </div>
@@ -54,11 +54,16 @@ const Home = () => {
             </button>
           </div>
           <div className="flex flex-col space-y-4 mt-8">
-          {navItems.map((item) => (
-    <a key={item.item} href={item.href} className="px-3 sm:px-4 md:px-6 py-2 border border-[#161616] rounded-[20px] text-[#161616] text-sm lg:text-3xl font-avantgarde hover:bg-[#BB000E] hover:text-[#FAFAFA]">
-      {item.item}
-    </a>
-))}
+            {navItems.map((item) => (
+              <a
+                key={item.item}
+                href={item.href}
+                className="px-3 sm:px-4 md:px-6 py-2 border border-[#161616] rounded-[20px] text-[#161616] text-sm lg:text-3xl font-avantgarde hover:bg-[#BB000E] hover:text-[#FAFAFA]"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {item.item}
+              </a>
+            ))}
             <button
               className="px-3 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-xl font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -87,7 +92,7 @@ const Home = () => {
         {/* Left Panel */}
         <div className="border-2 border-[#161616] rounded-[20px]  " >
           <video src={video} autoPlay loop muted playsInline className="w-full h-full object-cover rounded-[16px]"></video>
-          </div>
+        </div>
 
         {/* Center Panel */}
         <div className="border-2 border-[#161616] rounded-[20px] overflow-hidden relative flex items-center justify-center h-[250px] sm:h-[300px] md:h-[350px] lg:h-[450px]">
@@ -109,19 +114,17 @@ const Home = () => {
           <button
             className={`w-full text-4xl min-w-[200px] sm:min-w-[160px] whitespace-nowrap 
 sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-avantgarde p-4  rounded-[20px] flex items-center justify-center border-[3px]
-            ${
-              isHovered
+            ${isHovered
                 ? "bg-white text-black border-[#BB000E] shadow-[inset_0px_0px_14px_rgba(0,0,0,0.6)]"
                 : "bg-[#BB000E] text-[#FAFAFA] border-[#161616] shadow-[inset_0px_0px_14px_rgba(227,28,37,0.60)]"
-            }`}
+              }`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             BOOK TICKETS
             <ArrowUpRight
-              className={`w-14 flex-shrink-0 h-14 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pl-2 transition-all duration-300 ease-in-out ${
-                isHovered ? "rotate-45" : "rotate-0"
-              }`}
+              className={`w-14 flex-shrink-0 h-14 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pl-2 transition-all duration-300 ease-in-out ${isHovered ? "rotate-45" : "rotate-0"
+                }`}
             />
           </button>
 
