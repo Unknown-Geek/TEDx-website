@@ -113,7 +113,7 @@ const SpeakersList = () => {
                                     <div className="w-full max-w-md">
                                         <img src={image} alt={testimonial.name} className="w-full h-auto " />
                                     </div>
-                                    <div className=' flex-row hidden md:flex '><p className='font-vanguard text-4xl md:text-5xl text-red-500 font-medium'>TEDx</p><p className='font-vanguard text-4xl md:text-5xl text-black font-medium'>SPEAKER</p> </div>
+                                    <div className=' flex-row hidden md:flex '><p className='font-vanguard text-4xl md:text-5xl text-red-600 font-medium'>TEDx</p><p className='font-vanguard text-4xl md:text-5xl text-black font-medium'>SPEAKER</p> </div>
 
                                 </div>
 

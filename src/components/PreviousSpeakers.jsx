@@ -135,7 +135,7 @@ const PreviousSpeakers = () => {
                   >
                     {/* Front of card */}
                     <div 
-                      className="flex flex-col items-center bg-white rounded-3xl overflow-hidden border-[2px] border-red-500 backface-hidden"
+                      className="flex flex-col items-center bg-white rounded-3xl overflow-hidden border-[2px] border-red-600 backface-hidden"
                       style={{ backfaceVisibility: 'hidden' }}
                     >
                       <div className="relative h-[300px]">
@@ -149,7 +149,7 @@ const PreviousSpeakers = () => {
                         <h4 className="text-4xl font-semibold md:text-5xl text-gray-900 font-vanguard mb-2 text-center">
                           {card.name}
                         </h4>
-                        <h3 className="font-vanguard text-2xl md:text-3xl text-red-500 font-semibold text-center">
+                        <h3 className="font-vanguard text-2xl md:text-3xl text-red-600 font-semibold text-center">
                           {card.occupation}
                         </h3>
                       </div>
@@ -158,13 +158,13 @@ const PreviousSpeakers = () => {
                     {/* Back of card */}
 
                     <div 
-                      className="absolute top-0 left-0 w-full h-full bg-black rounded-3xl border-[2px] border-red-500 p-6 flex flex-col items-center  justify-center gap-10 backface-hidden"
+                      className="absolute top-0 left-0 w-full h-full bg-black rounded-3xl border-[2px] border-red-600 p-6 flex flex-col items-center  justify-center gap-10 backface-hidden"
                       style={{ 
                         backfaceVisibility: 'hidden',
                         transform: 'rotateY(180deg)',
                       }}
                     >
-                      <h1 className='text-red-500 font-vanguard font-semibold text-6xl'>{card.name}</h1>
+                      <h1 className='text-red-600 font-vanguard font-semibold text-6xl'>{card.name}</h1>
                       <p className="text-base text-white font-avantgarde leading-relaxed">
                         {card.about}
                       </p>

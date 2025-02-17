@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Home from "./components/Home"
 import Countdown from "./components/Countdown"
 import { Analytics } from "@vercel/analytics/react"
@@ -16,8 +17,47 @@ import Highlights_title from "./components/Highlights_title"
 import Highlights_text from "./components/Highlights_text"
 import Highlights from "./components/Highlights"
 import Ticket from "./components/Ticket"
+import WebTeam from "./components/WebTeam"
 import "./styles/ScrollingText.css"
 
+function MainContent({ entryCompleted, setEntryCompleted, transitionSpeed }) {
+  return (
+    <AnimatePresence mode="sync">
+      {!entryCompleted ? (
+        <motion.div
+          key="entry"
+          initial={{ y: 0 }}
+          exit={{ y: "-100%" }}
+          transition={{ duration: transitionSpeed, ease: [0.43, 0.13, 0.23, 0.96] }}
+          className="fixed inset-0 z-10"
+        >
+          <Entry onScrollUp={() => setEntryCompleted(true)} />
+        </motion.div>
+      ) : (
+        <motion.div
+          key="main-content"
+          initial={{ y: "100%" }}
+          animate={{ y: 0 }}
+          transition={{ duration: transitionSpeed, ease: [0.43, 0.13, 0.23, 0.96] }}
+          className="w-full space-y-12"
+        >
+          <Home />
+          <Countdown />
+          <About />
+          <SpeakersTitle />
+          <SpeakersList />
+          <PreviousSpeakersTitle />
+          <PreviousSpeakers />
+          <Highlights_title />
+          <Highlights />
+          <Highlights_text />
+          <Ticket />
+          <Footer />
+        </motion.div>
+      )}
+    </AnimatePresence>
+  )
+}
 
 export default function App() {
   const [entryCompleted, setEntryCompleted] = useState(false)
@@ -36,44 +76,24 @@ export default function App() {
   const transitionSpeed = isMobile ? 0.8 : 0.6
 
   return (
-    <div className="flex flex-col items-center justify-center bg-[#FAFAFA] overflow-hidden">
-      <AnimatePresence mode="sync">
-        {!entryCompleted ? (
-          <motion.div
-            key="entry"
-            initial={{ y: 0 }}
-            exit={{ y: "-100%" }}
-            transition={{ duration: transitionSpeed, ease: [0.43, 0.13, 0.23, 0.96] }}
-            className="fixed inset-0 z-10"
-          >
-            <Entry onScrollUp={() => setEntryCompleted(true)} />
-          </motion.div>
-        ) : (
-          <motion.div
-            key="main-content"
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            transition={{ duration: transitionSpeed, ease: [0.43, 0.13, 0.23, 0.96] }}
-            className="w-full space-y-12"
-          >
-            <Home />
-            <Countdown />
-            <About />
-            <SpeakersTitle />
-            <SpeakersList />
-            <PreviousSpeakersTitle />
-            <PreviousSpeakers />
-            <Highlights_title />
-            
-            <Highlights /> 
-            <Highlights_text />
-            <Ticket />
-            <Footer />
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <Analytics />
-    </div>
+    <BrowserRouter>
+      <div className="flex flex-col items-center justify-center bg-[#FAFAFA] overflow-hidden">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <MainContent
+                entryCompleted={entryCompleted}
+                setEntryCompleted={setEntryCompleted}
+                transitionSpeed={transitionSpeed}
+              />
+            }
+          />
+          <Route path="/team" element={<WebTeam />} />
+        </Routes>
+        <Analytics />
+      </div>
+    </BrowserRouter>
   )
 }
 
