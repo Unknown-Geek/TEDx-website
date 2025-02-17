@@ -12,8 +12,12 @@ import SpeakersList from "./components/SpeakersList"
 import SpeakersTitle from "./components/SpeakersTitle"
 import PreviousSpeakers from "./components/PreviousSpeakers"
 import PreviousSpeakersTitle from "./components/PreviousSpeakersTitle"
+import Highlights_title from "./components/Highlights_title"
+import Highlights_text from "./components/Highlights_text"
+import Highlights from "./components/Highlights"
 import Ticket from "./components/Ticket"
 import "./styles/ScrollingText.css"
+
 
 export default function App() {
   const [entryCompleted, setEntryCompleted] = useState(false)
@@ -59,6 +63,10 @@ export default function App() {
             <SpeakersList />
             <PreviousSpeakersTitle />
             <PreviousSpeakers />
+            <Highlights_title />
+            
+            <Highlights /> 
+            <Highlights_text />
             <Ticket />
             <Footer />
           </motion.div>
