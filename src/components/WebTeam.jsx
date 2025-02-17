@@ -17,29 +17,40 @@ import exe13 from "/public/assets/13.webp"
 
 const WebTeam = () => {
     return (
-        <div className='bg-[#161616] w-screen text-white flex flex-col justify-center items-center gap-7'>
-            <div className='flex flex-row justify-start gap-3 pt-4 w-screen pl-9' >
+        <div className='bg-[#161616] w-screen text-white flex flex-col justify-center items-center '>
+            <div className='flex flex-row justify-center gap-3 pt-4 w-screen md:justify-start md:pl-7 pb-5 ' >
                 <h1 className='text-6xl font-vanguard text-white font-semibold'>WEBSITE</h1>
                 <h1 className='text-6xl font-vanguard text-red-600 font-semibold'>TEAM</h1>
             </div>
-            <div className='w-screen h-[2px] bg-white'></div>
-            <div className=' w-screen flex justify-center gap-1'>
-                <img className='h-[723px] w-[350px]' src={image1} />
-                <img src={image2} className='h-[723px] w-[350px] mt-40 ' />
-                <img src={image3} className='h-[723px] w-[350px]' />
-                <img src={image4} className='h-[723px] w-[350px] mt-40' />
+            <div className='w-screen h-[2px] bg-white mb-4'></div>
+            <div className='w-screen md:flex md:flex-row flex-col justify-center md:gap-1 items-center'>
+                <div className="md:flex md:flex-row flex-col "> {/* Desktop view */}
+                    <img className='h-[723px] w-[350px] mx-auto' src={image1} />
+                    <img src={image2} className='h-[723px] w-[350px] md:mt-40 mx-auto' />
+                    <img src={image3} className='h-[723px] w-[350px] mx-auto' />
+                    <img src={image4} className='h-[723px] w-[350px] md:mt-40 mx-auto' />
+                </div>
+
+                {/* Mobile view */}
+                <div className="md:hidden flex flex-col gap-4">
+                    <img className='h-[723px] w-[350px] mx-auto' src={image1} />
+                    <img src={image2} className='h-[723px] w-[350px] mx-auto' />
+                    <img src={image3} className='h-[723px] w-[350px] mx-auto' />
+                    <img src={image4} className='h-[723px] w-[350px] mx-auto' />
+                </div>
             </div>
 
             {/* Add EXECOM section */}
-            <div className='flex flex-row justify-start gap-3 pt-16 w-screen pl-9'>
-                <h1 className='text-6xl font-vanguard text-white font-semibold'>EXECUTIVE</h1>
-                <h1 className='text-6xl font-vanguard text-red-600 font-semibold'>COMMITTEE</h1>
+            <div className='flex flex-row justify-start items-center gap-3 pt-16 w-screen md:pl-9 pl-3 pb-3'>
+                <h1 className='text-[55px]  font-vanguard text-white font-semibold'>EXECUTIVE</h1>
+                <h1 className='text-[55px]   font-vanguard text-red-600 font-semibold'>COMMITTEE</h1>
             </div>
             <div className='w-screen h-[2px] bg-white'></div>
 
             {/* Fixed infinite scroll container */}
             <div className="relative w-screen overflow-hidden py-8">
-                <div className="flex animate-scroll w-max">
+                {/* Desktop horizontal scroll */}
+                <div className="hidden md:flex animate-scroll w-max">
                     {/* First set of images with alternating positions */}
                     <div className="flex gap-8">
                         <div className="flex flex-col">
@@ -105,6 +116,39 @@ const WebTeam = () => {
                         </div>
                         <div className="flex flex-col pt-56">
                             <img src={exe13} alt="Execom 10" className="h-[330px] w-[461px] " />
+                        </div>
+                    </div>
+                </div>
+
+                {/* Mobile vertical scroll */}
+                <div className="md:hidden relative w-full overflow-hidden h-[80vh]">
+                    <div className="flex flex-col animate-scroll-vertical w-full">
+                        {/* First set of images */}
+                        <div className="flex flex-col gap-8 px-4">
+                            <img src={exe1} alt="Execom 1" className="w-full h-auto" />
+                            <img src={exe2} alt="Execom 2" className="w-full h-auto" />
+                            <img src={exe3} alt="Execom 3" className="w-full h-auto" />
+                            <img src={exe4} alt="Execom 4" className="w-full h-auto" />
+                            <img src={exe5} alt="Execom 5" className="w-full h-auto" />
+                            <img src={exe6} alt="Execom 6" className="w-full h-auto" />
+                            <img src={exe7} alt="Execom 7" className="w-full h-auto" />
+                            <img src={exe8} alt="Execom 8" className="w-full h-auto" />
+                            <img src={exe9} alt="Execom 9" className="w-full h-auto" />
+                            <img src={exe13} alt="Execom 10" className="w-full h-auto" />
+                        </div>
+
+                        {/* Duplicate set for seamless scrolling */}
+                        <div className="flex flex-col gap-8 px-4">
+                            <img src={exe1} alt="Execom 1" className="w-full h-auto" />
+                            <img src={exe2} alt="Execom 2" className="w-full h-auto" />
+                            <img src={exe3} alt="Execom 3" className="w-full h-auto" />
+                            <img src={exe4} alt="Execom 4" className="w-full h-auto" />
+                            <img src={exe5} alt="Execom 5" className="w-full h-auto" />
+                            <img src={exe6} alt="Execom 6" className="w-full h-auto" />
+                            <img src={exe7} alt="Execom 7" className="w-full h-auto" />
+                            <img src={exe8} alt="Execom 8" className="w-full h-auto" />
+                            <img src={exe9} alt="Execom 9" className="w-full h-auto" />
+                            <img src={exe13} alt="Execom 10" className="w-full h-auto" />
                         </div>
                     </div>
                 </div>

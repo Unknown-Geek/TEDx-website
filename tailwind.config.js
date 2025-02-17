@@ -13,12 +13,17 @@ module.exports = {
       },
       animation: {
         scroll: 'scroll 40s linear infinite',
+        'scroll-vertical': 'scrollVertical 40s linear infinite',
       },
       keyframes: {
         scroll: {
           '0%': { transform: 'translateX(0)' },
           '100%': { transform: 'translateX(-50%)' },
         },
+        scrollVertical: {
+          '0%': { transform: 'translateY(0)' },
+          '100%': { transform: 'translateY(-50%)' }
+        }
       },
     },
   },
