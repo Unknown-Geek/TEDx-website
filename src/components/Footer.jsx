@@ -38,10 +38,10 @@ const Footer = () => {
 
         <div className=" flex flex-col justify-center items-center  h-[500px] lg:w-full lg:h-[484px] rounded-[20px] overflow-hidden border-2 border-[#161616]">
           <div className="lg:flex lg:flex-col flex flex-col">
-            <div className="h-[130px] pl-2 pt-3 lg:mb-2  lg:w-[400px] lg:h-[160px] text-center text-[#E31C25] text-[90px] font-bold font-vanguard overflow-hidden ">
+            <div className="h-[130px] pl-2 pt-3 lg:mb-2  lg:w-[400px] lg:h-[180px] text-center text-[#E31C25] lg:text-[120px] text-[90px] font-bold font-vanguard overflow-hidden ">
               CONNECT
             </div>
-            <div className="pl-2 h-[120px] lg:-mt-10  text-center text text-[#161616] text-[50px] font-bold font-[Vanguard] lg:h-[160px] ">
+            <div className="pl-2 h-[120px] lg:-mt-10  text-center text text-[#161616] text-[50px] md:text-[70px] font-bold font-[Vanguard] lg:h-[160px] ">
               WITH US ON
             </div>
           </div>
