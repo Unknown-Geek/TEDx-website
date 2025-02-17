@@ -16,10 +16,10 @@ export default function Entry({ onScrollUp }) {
     }
   }, [])
 
-  // Auto-scroll shortly after video ends
+  // Auto-scroll after video ends
   useEffect(() => {
     if (videoEnded) {
-      const timeout = setTimeout(onScrollUp, 500) // Reduced delay to 0.5s for a smoother transition
+      const timeout = setTimeout(onScrollUp, 500) // Faster transition
       return () => clearTimeout(timeout)
     }
   }, [videoEnded, onScrollUp])
@@ -29,7 +29,7 @@ export default function Entry({ onScrollUp }) {
       className="fixed inset-0 flex items-center justify-center bg-black overflow-hidden"
       initial={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }} // Faster transition
+      transition={{ duration: 0.4, ease: "easeInOut" }}
     >
       {/* Background Video */}
       <video
@@ -43,25 +43,20 @@ export default function Entry({ onScrollUp }) {
         Your browser does not support the video tag.
       </video>
 
-      {/* Animated Scroll-Up Icon (Appears instantly after video ends) */}
-      <AnimatePresence>
-        {videoEnded && (
-          <motion.div
-            className="absolute bottom-10 left-0 w-full flex justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeOut" }} // Quicker fade-in
-          >
-            <motion.div
-              animate={{ y: [0, -5, 0] }}
-              transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }} // Faster bounce animation
-            >
-              <ArrowUpCircle className="text-white" size={56} strokeWidth={2.5} />
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Scroll-Up Icon (Now visible from the start & clickable) */}
+      <motion.div
+        className="absolute bottom-10 left-0 w-full flex justify-center cursor-pointer"
+        initial={{ opacity: 0.4 }} // Dimmed initially
+        animate={{ opacity: videoEnded ? 1 : 0.4 }} // Fully visible after video
+        onClick={onScrollUp} // Skip animation on click
+      >
+        <motion.div
+          animate={{ y: [0, -5, 0] }}
+          transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
+        >
+          <ArrowUpCircle className="text-white" size={56} strokeWidth={2.5} />
+        </motion.div>
+      </motion.div>
     </motion.div>
   )
 }
