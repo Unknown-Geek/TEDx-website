@@ -14,7 +14,7 @@ const Home = () => {
   const [isHovered, setIsHovered] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
 
-  const navItems = [{ item: "About", href: "#about" }, { item: "Speakers", href: "#speakers" }, { item: "Team", href: "#team" }, { item: "Contact", href: "#contact" }]
+  const navItems = [{ item: "About", href: "#about" }, { item: "Speakers", href: "#speakers" }, { item: "Team", href: "team" }, { item: "Contact", href: "#contact" }]
 
   return (
     <div className="container mx-auto p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20">
