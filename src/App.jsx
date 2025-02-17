@@ -1,3 +1,5 @@
+"use client"
+
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Home from "./components/Home"
@@ -13,14 +15,13 @@ import PreviousSpeakersTitle from "./components/PreviousSpeakersTitle"
 import Ticket from "./components/Ticket"
 import "./styles/ScrollingText.css"
 
-function App() {
+export default function App() {
   const [entryCompleted, setEntryCompleted] = useState(false)
   const [isMobile, setIsMobile] = useState(false)
 
-  // Detect mobile screen size
   useEffect(() => {
     const checkScreenSize = () => {
-      setIsMobile(window.innerWidth < 768) // Mobile = width < 768px
+      setIsMobile(window.innerWidth < 768)
     }
 
     checkScreenSize()
@@ -28,48 +29,43 @@ function App() {
     return () => window.removeEventListener("resize", checkScreenSize)
   }, [])
 
-  // Different animation speeds
-  const transitionSpeed = isMobile ? 1.2 : 1.0 // Slower on mobile
+  const transitionSpeed = isMobile ? 0.8 : 0.6
 
   return (
-    <div className="flex flex-col items-center justify-center gap-12 bg-[#FAFAFA] overflow-hidden">
-      {/* Animate Entry and Main Content */}
-      <AnimatePresence mode="wait">
-        {!entryCompleted && (
+    <div className="flex flex-col items-center justify-center bg-[#FAFAFA] overflow-hidden">
+      <AnimatePresence mode="sync">
+        {!entryCompleted ? (
           <motion.div
             key="entry"
             initial={{ y: 0 }}
-            animate={{ y: 0 }}
-            exit={{ y: "-100%", opacity: 0 }}
-            transition={{ duration: transitionSpeed, ease: "easeInOut" }}
+            exit={{ y: "-100%" }}
+            transition={{ duration: transitionSpeed, ease: [0.43, 0.13, 0.23, 0.96] }}
+            className="fixed inset-0 z-10"
           >
             <Entry onScrollUp={() => setEntryCompleted(true)} />
           </motion.div>
+        ) : (
+          <motion.div
+            key="main-content"
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            transition={{ duration: transitionSpeed, ease: [0.43, 0.13, 0.23, 0.96] }}
+            className="w-full space-y-12"
+          >
+            <Home />
+            <Countdown />
+            <About />
+            <SpeakersTitle />
+            <SpeakersList />
+            <PreviousSpeakersTitle />
+            <PreviousSpeakers />
+            <Ticket />
+            <Footer />
+          </motion.div>
         )}
-
-      <motion.div
-        key="main-content"
-        initial={{ y: "100%", opacity: 0 }}
-        animate={entryCompleted ? { y: 0, opacity: 1 } : { y: "100%", opacity: 0 }}
-        transition={{ duration: transitionSpeed, ease: "easeInOut" }}
-        className="w-full space-y-12"
-      >
-        <Home />
-        <Countdown />
-        <About />
-        <SpeakersTitle />
-        <SpeakersList />
-        <PreviousSpeakersTitle />
-        <PreviousSpeakers />
-        <Ticket />
-        <Footer />
-      </motion.div>
-
-      <Analytics />
       </AnimatePresence>
+      <Analytics />
     </div>
-
   )
 }
 
-export default App
