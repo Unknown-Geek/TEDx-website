@@ -29,7 +29,7 @@ function App() {
   }, [])
 
   // Different animation speeds
-  const transitionSpeed = isMobile ? 1.2 : 0.8 // Slower on mobile
+  const transitionSpeed = isMobile ? 1.2 : 1.0 // Slower on mobile
 
   return (
     <div className="flex flex-col items-center justify-center gap-12 bg-[#FAFAFA] overflow-hidden">
