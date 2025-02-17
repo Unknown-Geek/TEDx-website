@@ -3,9 +3,9 @@ import logo2 from '/public/assets/Logo-Black.png'; // Ensure the correct path
 
 const Highlights_title = () => {
   return (
-    <div className=" flex flex-col justify-center items-center md:pl-20 w-screen">
+    <div className=" flex flex-col justify-center items-center md:pl-20 w-screen pl-10">
       {/* Title Section */}
-      <div className="pl:5 gap:1 flex flex-row md:gap-8 justify-start md:w-full md:pl-4 w-full">
+      <div className="pl:5 gap-4 flex flex-row md:gap-8 justify-start md:w-full md:pl-4 w-full">
         <p className="font-vanguard text-5xl md:text-8xl text-black font-bold ">HIGHLIGHTS</p>
         <p className="font-vanguard text-5xl md:text-8xl text-red-600 font-bold">OF</p>
       </div>
