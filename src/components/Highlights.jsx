@@ -2,18 +2,18 @@ import React from "react";
 
 const HoverImage = ({ defaultSrc, hoverSrc, alt }) => {
   return (
-    <div className="relative md:w-[1700px] md:h-[1200px] w-[354px] h-[250px] ">
-      {/* Default Image (Visible by Default) */}
+    <div className="relative md:w-full md:h-full w-[354px] h-[250px] group">
+      {/* Default Image */}
       <img
         src={defaultSrc}
         alt={alt}
-        className="absolute inset-0 w-full h-full transition-opacity duration-300 hover:opacity-0 object-cover"
+        className="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
       />
-      {/* Hover Image (Initially Hidden) */}
+      {/* Hover Image */}
       <img
         src={hoverSrc}
         alt={alt}
-        className="absolute inset-0 w-full h-full opacity-0 transition-opacity duration-300 hover:opacity-100"
+        className="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
       />
     </div>
   );
@@ -22,11 +22,13 @@ const HoverImage = ({ defaultSrc, hoverSrc, alt }) => {
 const Highlights = () => {
   return (
     <div className="flex justify-center items-center md:h-[900px] h-[150px]">
-      <HoverImage
-        defaultSrc="/assets/highlight.png"
-        hoverSrc="/assets/highlight_hover.png"
-        alt="Hover to change"
-      />
+      <div className="md:w-[1700px] md:h-[1200px]">
+        <HoverImage
+          defaultSrc="/assets/highlight.png"
+          hoverSrc="/assets/highlight_hover.png"
+          alt="Hover to change"
+        />
+      </div>
     </div>
   );
 };

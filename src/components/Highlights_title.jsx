@@ -5,14 +5,14 @@ const Highlights_title = () => {
   return (
     <div className=" flex flex-col justify-center items-center md:pl-20 w-screen">
       {/* Title Section */}
-      <div className="pl:5 gap:1 flex flex-row md:gap-8 justify-start md:w-full md:pl-16 w-full">
+      <div className="pl:5 gap:1 flex flex-row md:gap-8 justify-start md:w-full md:pl-4 w-full">
         <p className="font-vanguard text-5xl md:text-8xl text-black font-bold ">HIGHLIGHTS</p>
-        <p className="font-vanguard text-5xl md:text-8xl text-red-500 font-bold">OF</p>
+        <p className="font-vanguard text-5xl md:text-8xl text-red-600 font-bold">OF</p>
       </div>
 
       {/* Horizontal Line with Logo */}
-      <div className=" w-full flex items-center md:w-full md:pl-10">
-        <div className=" flex-grow border-t-4 border-black "></div>
+      <div className=" w-full flex items-center md:w-full md:pl-1">
+        <div className=" flex-grow border-t-4 border-black md:pl-20 pl-10"></div>
         <div className="mx-4 ">
           <img
             className="md:w-[770px]  object-contain md:h-20"
