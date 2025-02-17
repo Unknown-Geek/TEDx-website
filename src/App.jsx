@@ -32,7 +32,8 @@ function App() {
   const transitionSpeed = isMobile ? 1.2 : 0.8 // Slower on mobile
 
   return (
-    <div className="flex flex-col items-center justify-center bg-[#FAFAFA] overflow-hidden min-h-screen">
+    <div className="flex flex-col items-center justify-center gap-12 bg-[#FAFAFA] overflow-hidden">
+      {/* Animate Entry and Main Content */}
       <AnimatePresence mode="wait">
         {!entryCompleted && (
           <motion.div
@@ -45,7 +46,6 @@ function App() {
             <Entry onScrollUp={() => setEntryCompleted(true)} />
           </motion.div>
         )}
-      </AnimatePresence>
 
       <motion.div
         key="main-content"
@@ -66,7 +66,9 @@ function App() {
       </motion.div>
 
       <Analytics />
+      </AnimatePresence>
     </div>
+
   )
 }
 
