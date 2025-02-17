@@ -24,19 +24,11 @@ const WebTeam = () => {
             </div>
             <div className='w-screen h-[2px] bg-white mb-4'></div>
             <div className='w-screen md:flex md:flex-row flex-col justify-center md:gap-1 items-center'>
-                <div className="md:flex md:flex-row flex-col "> {/* Desktop view */}
+                <div className="md:flex md:flex-row flex-col "> 
                     <img className='h-[723px] w-[350px] mx-auto' src={image1} />
                     <img src={image2} className='h-[723px] w-[350px] md:mt-40 mx-auto' />
                     <img src={image3} className='h-[723px] w-[350px] mx-auto' />
                     <img src={image4} className='h-[723px] w-[350px] md:mt-40 mx-auto' />
-                </div>
-
-                {/* Mobile view */}
-                <div className="md:hidden flex flex-col gap-4">
-                    <img className='h-[723px] w-[350px] mx-auto' src={image1} />
-                    <img src={image2} className='h-[723px] w-[350px] mx-auto' />
-                    <img src={image3} className='h-[723px] w-[350px] mx-auto' />
-                    <img src={image4} className='h-[723px] w-[350px] mx-auto' />
                 </div>
             </div>
 
@@ -51,41 +43,7 @@ const WebTeam = () => {
             <div className="relative w-screen overflow-hidden py-8">
                 {/* Desktop horizontal scroll */}
                 <div className="hidden md:flex animate-scroll w-max">
-                    {/* First set of images with alternating positions */}
-                    <div className="flex gap-8">
-                        <div className="flex flex-col">
-                            <img src={exe1} alt="Execom 1" className="h-[330px] w-[461px] " />
-                        </div>
-                        <div className="flex flex-col pt-56">
-                            <img src={exe2} alt="Execom 2" className="h-[330px] w-[523px] " />
-                        </div>
-                        <div className="flex flex-col">
-                            <img src={exe3} alt="Execom 3" className="h-[330px] w-[572px] " />
-                        </div>
-                        <div className="flex flex-col pt-56">
-                            <img src={exe4} alt="Execom 4" className="h-[330px] w-[563px] " />
-                        </div>
-                        <div className="flex flex-col">
-                            <img src={exe5} alt="Execom 5" className="h-[330px] w-[563px] " />
-                        </div>
-                        <div className="flex flex-col pt-56">
-                            <img src={exe6} alt="Execom 6" className="h-[330px] w-[461px] " />
-                        </div>
-                        <div className="flex flex-col">
-                            <img src={exe7} alt="Execom 7" className="h-[330px] w-[587px] " />
-                        </div>
-                        <div className="flex flex-col pt-56">
-                            <img src={exe8} alt="Execom 8" className="h-[330px] w-[461px]  " />
-                        </div>
-                        <div className="flex flex-col">
-                            <img src={exe9} alt="Execom 9" className="h-[330px] w-[464px] " />
-                        </div>
-                        <div className="flex flex-col pt-56">
-                            <img src={exe13} alt="Execom 10" className="h-[330px] w-[461px] " />
-                        </div>
-                    </div>
-
-                    {/* Duplicate set for seamless scrolling with the same alternating pattern */}
+                    {/* Single set of images with alternating positions */}
                     <div className="flex gap-8">
                         <div className="flex flex-col">
                             <img src={exe1} alt="Execom 1" className="h-[330px] w-[461px] " />
@@ -123,21 +81,7 @@ const WebTeam = () => {
                 {/* Mobile vertical scroll */}
                 <div className="md:hidden relative w-full overflow-hidden h-[80vh]">
                     <div className="flex flex-col animate-scroll-vertical w-full">
-                        {/* First set of images */}
-                        <div className="flex flex-col gap-8 px-4">
-                            <img src={exe1} alt="Execom 1" className="w-full h-auto" />
-                            <img src={exe2} alt="Execom 2" className="w-full h-auto" />
-                            <img src={exe3} alt="Execom 3" className="w-full h-auto" />
-                            <img src={exe4} alt="Execom 4" className="w-full h-auto" />
-                            <img src={exe5} alt="Execom 5" className="w-full h-auto" />
-                            <img src={exe6} alt="Execom 6" className="w-full h-auto" />
-                            <img src={exe7} alt="Execom 7" className="w-full h-auto" />
-                            <img src={exe8} alt="Execom 8" className="w-full h-auto" />
-                            <img src={exe9} alt="Execom 9" className="w-full h-auto" />
-                            <img src={exe13} alt="Execom 10" className="w-full h-auto" />
-                        </div>
-
-                        {/* Duplicate set for seamless scrolling */}
+                        {/* Single set of images */}
                         <div className="flex flex-col gap-8 px-4">
                             <img src={exe1} alt="Execom 1" className="w-full h-auto" />
                             <img src={exe2} alt="Execom 2" className="w-full h-auto" />
