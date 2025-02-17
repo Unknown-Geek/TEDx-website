@@ -113,7 +113,7 @@ const Home = () => {
           {/* Book Tickets Button */}
           <button
             className={`w-full text-4xl min-w-[200px] sm:min-w-[160px] whitespace-nowrap 
-sm:text-4xl md:text-4xl lg:text-4xl xl:text-5xl font-avantgarde p-4  rounded-[20px] flex items-center justify-center border-[3px]
+sm:text-4xl md:text-3xl lg:text-3xl xl:text-5xl font-avantgarde p-4  rounded-[20px] flex items-center justify-center border-[3px]
             ${isHovered
                 ? "bg-white text-black border-[#BB000E] shadow-[inset_0px_0px_14px_rgba(0,0,0,0.6)]"
                 : "bg-[#BB000E] text-[#FAFAFA] border-[#161616] shadow-[inset_0px_0px_14px_rgba(227,28,37,0.60)]"
