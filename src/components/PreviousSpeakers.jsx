@@ -97,6 +97,8 @@ const PreviousSpeakers = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [cardsPerView, setCardsPerView] = useState(3);
   const [flippedCards, setFlippedCards] = useState(new Set());
+  const [touchStart, setTouchStart] = useState(null);
+  const [touchEnd, setTouchEnd] = useState(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -142,6 +144,34 @@ const PreviousSpeakers = () => {
     });
   };
 
+  const handleTouchStart = (e) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) return;
+
+    const distance = touchStart - touchEnd;
+    const minSwipeDistance = 50;
+
+    if (Math.abs(distance) < minSwipeDistance) return;
+
+    if (distance > 0) {
+      // Swiped left
+      nextSlide();
+    } else {
+      // Swiped right
+      prevSlide();
+    }
+
+    setTouchStart(null);
+    setTouchEnd(null);
+  };
+
   return (
     <div className="py-8 bg-white flex items-center justify-center w-full">
       <div className="relative w-full max-w-[1400px] mx-auto px-4 lg:px-12">
@@ -149,7 +179,7 @@ const PreviousSpeakers = () => {
           onClick={prevSlide}
           className="absolute left-0 top-1/2 -translate-y-1/2 z-40 
                    w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg 
-                   flex items-center justify-center
+                   hidden md:flex items-center justify-center
                    hover:bg-gray-50 transition-colors
                    focus:outline-none focus:ring-2 focus:ring-blue-500"
           aria-label="Previous slide"
@@ -157,7 +187,12 @@ const PreviousSpeakers = () => {
           <ChevronLeft className="w-6 h-6 sm:w-8 sm:h-8 text-gray-700" />
         </button>
 
-        <div className="overflow-hidden">
+        <div
+          className="overflow-hidden"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <div
             className="flex transition-transform duration-500 ease-out gap-4"
             style={{ transform: `translateX(-${currentIndex * (100 / cardsPerView)}%)` }}
@@ -226,7 +261,7 @@ const PreviousSpeakers = () => {
           onClick={nextSlide}
           className="absolute right-0 top-1/2 -translate-y-1/2 z-40 
                    w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white shadow-lg 
-                   flex items-center justify-center
+                   hidden md:flex items-center justify-center
                    hover:bg-gray-50 transition-colors
                    focus:outline-none focus:ring-2 focus:ring-blue-500"
           aria-label="Next slide"
