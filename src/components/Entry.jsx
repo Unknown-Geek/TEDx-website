@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { ArrowUpCircle } from "lucide-react"
+import { ChevronsUp } from "lucide-react"
 
 export default function Entry({ onScrollUp }) {
   const [videoEnded, setVideoEnded] = useState(false)
@@ -42,7 +42,7 @@ export default function Entry({ onScrollUp }) {
         <source src="/assets/Intro.mp4" type="video/mp4"/>
       </video>
 
-      {/* Scroll-Up Icon (Now visible from the start & clickable) */}
+      {/* Scroll-Up Icon (Now using ChevronsUp) */}
       <motion.div
         className="absolute bottom-10 left-0 w-full flex justify-center cursor-pointer"
         initial={{ opacity: 0.4 }} // Dimmed initially
@@ -53,7 +53,7 @@ export default function Entry({ onScrollUp }) {
           animate={{ y: [0, -5, 0] }}
           transition={{ repeat: Infinity, duration: 1, ease: "easeInOut" }}
         >
-          <ArrowUpCircle className="text-white" size={56} strokeWidth={2.5} />
+          <ChevronsUp className="text-white" size={56} strokeWidth={2.5} />
         </motion.div>
       </motion.div>
     </motion.div>

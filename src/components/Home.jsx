@@ -1,6 +1,5 @@
-"use client"
-
 import { useState } from "react"
+import { useNavigate } from "react-router-dom"
 import Lottie from "lottie-react"
 import dateLottie from "/public/assets/Date-Lottie.json"
 import image535 from "/public/assets/image 535.png"
@@ -13,14 +12,24 @@ import logo from "/public/assets/Logo-White.png"
 const Home = () => {
   const [isHovered, setIsHovered] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const navigate = useNavigate()
 
-  const navItems = [{ item: "About", href: "#about" }, { item: "Speakers", href: "#speakers" }, { item: "Team", href: "/team" }, { item: "Contact", href: "#contact" }]
+  const navItems = [
+    { item: "About", href: "#about" },
+    { item: "Speakers", href: "#speakers" },
+    { item: "Team", href: "/team" },
+    { item: "Contact", href: "#contact" }
+  ]
+
+  const handleMerchClick = () => {
+    navigate("/merch", { state: { toMerch: true } })
+  }
 
   return (
     <div className="container mx-auto p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20">
       {/* Navigation */}
       <nav className="flex justify-between items-center gap-4 mb-6 md:mb-8">
-        <div className="flex items-center justify-center  bg-[#161616] rounded-[12px] w-[180px] ">
+        <div className="flex items-center justify-center bg-[#161616] rounded-[12px] w-[180px]">
           <img
             className="p-3 w-[170px] h-[50px]"
             src={logo || "/placeholder.svg"}
@@ -28,14 +37,21 @@ const Home = () => {
           />
         </div>
         <div className="hidden md:flex gap-2 lg:gap-4">
-        {navItems.map((item) => (
-    <a key={item.item} href={item.href} className="px-3 sm:px-4 md:px-6 py-2 border border-[#161616] rounded-[20px] text-[#161616] text-sm lg:text-3xl font-avantgarde hover:bg-[#BB000E] hover:text-[#FAFAFA]">
-      {item.item}
-    </a>
-))}
-          <a href="merch"className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-sm lg:text-3xl  font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]">
+          {navItems.map((item) => (
+            <a
+              key={item.item}
+              href={item.href}
+              className="px-3 sm:px-4 md:px-6 py-2 border border-[#161616] rounded-[20px] text-[#161616] text-sm lg:text-3xl font-avantgarde hover:bg-[#BB000E] hover:text-[#FAFAFA]"
+            >
+              {item.item}
+            </a>
+          ))}
+          <button
+            onClick={handleMerchClick}
+            className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-sm lg:text-3xl font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]"
+          >
             Buy Merch
-          </a>
+          </button>
         </div>
         <button
           className="md:hidden p-2 border border-[#161616] rounded-md"
@@ -49,7 +65,10 @@ const Home = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-50 p-4">
           <div className="flex justify-end">
-            <button className="p-2 border border-[#161616] rounded-md" onClick={() => setIsMobileMenuOpen(false)}>
+            <button
+              className="p-2 border border-[#161616] rounded-md"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
               <Menu className="h-6 w-6" />
             </button>
           </div>
@@ -64,12 +83,15 @@ const Home = () => {
                 {item.item}
               </a>
             ))}
-            <a href="merch"
+            <button
+              onClick={() => {
+                setIsMobileMenuOpen(false)
+                handleMerchClick()
+              }}
               className="px-3 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-xl font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]"
-              onClick={() => setIsMobileMenuOpen(false)}
             >
               Buy Merch
-            </a>
+            </button>
           </div>
         </div>
       )}
@@ -90,8 +112,15 @@ const Home = () => {
       {/* Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
         {/* Left Panel */}
-        <div className="border-2 border-[#161616] rounded-[20px]  " >
-          <video src={video} autoPlay loop muted playsInline className="w-full h-full object-cover rounded-[16px]"></video>
+        <div className="border-2 border-[#161616] rounded-[20px]">
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover rounded-[16px] filter grayscale"
+          ></video>
         </div>
 
         {/* Center Panel */}
@@ -109,28 +138,30 @@ const Home = () => {
         </div>
 
         {/* Right Panel */}
-        <div className="rounded-[20px] flex flex-col gap-4 md:gap-6  md:col-span-2 lg:col-span-1 ">
+        <div className="rounded-[20px] flex flex-col gap-4 md:gap-6 md:col-span-2 lg:col-span-1">
           {/* Book Tickets Button */}
           <button
             className={`w-full text-4xl min-w-[200px] sm:min-w-[160px] whitespace-nowrap 
-sm:text-4xl md:text-3xl lg:text-3xl xl:text-5xl font-avantgarde p-4  rounded-[20px] flex items-center justify-center border-[3px]
-            ${isHovered
-                ? "bg-white text-black border-[#BB000E] shadow-[inset_0px_0px_14px_rgba(0,0,0,0.6)]"
-                : "bg-[#BB000E] text-[#FAFAFA] border-[#161616] shadow-[inset_0px_0px_14px_rgba(227,28,37,0.60)]"
+              sm:text-4xl md:text-3xl lg:text-3xl xl:text-5xl font-avantgarde p-4 rounded-[20px] flex items-center justify-center border-[3px]
+              ${
+                isHovered
+                  ? "bg-white text-black border-[#BB000E] shadow-[inset_0px_0px_14px_rgba(0,0,0,0.6)]"
+                  : "bg-[#BB000E] text-[#FAFAFA] border-[#161616] shadow-[inset_0px_0px_14px_rgba(227,28,37,0.60)]"
               }`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             BOOK TICKETS
             <ArrowUpRight
-              className={`w-14 flex-shrink-0 h-14 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pl-2 transition-all duration-300 ease-in-out ${isHovered ? "rotate-45" : "rotate-0"
-                }`}
+              className={`w-14 flex-shrink-0 h-14 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pl-2 transition-all duration-300 ease-in-out ${
+                isHovered ? "rotate-45" : "rotate-0"
+              }`}
             />
           </button>
 
           {/* Date Display */}
           <div className="bg-[#161616] rounded-[20px] h-[200px] sm:h-[250px] md:h-[325px] flex justify-center items-center">
-            <Lottie animationData={dateLottie}  />
+            <Lottie animationData={dateLottie} />
           </div>
         </div>
       </div>
@@ -139,4 +170,3 @@ sm:text-4xl md:text-3xl lg:text-3xl xl:text-5xl font-avantgarde p-4  rounded-[20
 }
 
 export default Home
-
