@@ -8,8 +8,52 @@ import butterflyEffect from "/public/assets/Butterfly-Effect.svg"
 import { ArrowUpRight, Menu } from "lucide-react"
 import video from "/public/assets/video.mp4"
 import logo from "/public/assets/Logo-White.png"
+import image1 from "/public/assets/image1.svg"
+import image2 from "/public/assets/image2.svg"
+import image3 from "/public/assets/image3.svg"
+
+const HoverStackImages = ({ images }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
+  return (
+    <div
+      className=" w-[350px] h-[300px] sm:w-[300px] sm:h-[350px] mx-auto cursor-pointer"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {images.map((image, index) => (
+        <img
+          key={index}
+          src={image}
+          alt={`Image ${index + 1}`}
+          className={`absolute inset-0 md:w-[1400px] md:h-[300px] w-[330px] md:pt-16 md:pb-10 pt-5 object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out
+            ${isHovered ? getHoverTransform(index) : "translate-x-0 translate-y-0"}
+          `}
+          style={{ zIndex: images.length - index }}
+        />
+      ))}
+    </div>
+  );
+};
+
+const getHoverTransform = (index) => {
+  const positions = [
+    
+    "translate-x-[-25px] translate-y-[-30px]",
+     // First image moves up-left
+     "translate-x-[25px] translate-y-[30px]",
+    "translate-x-[5px] translate-y-[-5px]",// Second image stays in the center
+     // Third image moves down-right
+  ];
+  return positions[index] || "";
+};
+
+const images = [image1, image3,image2];
 
 const Home = () => {
+  
+
+
   const [isHovered, setIsHovered] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const navigate = useNavigate()
@@ -97,20 +141,14 @@ const Home = () => {
       )}
 
       {/* Hero Section */}
-      <div className="mb-6 md:mb-8">
-        <div className="bg-[#161616] rounded-[20px] px-4 sm:px-6 md:px-8 relative">
-          <div className="relative h-[150px] sm:h-[200px] md:h-[250px] lg:h-[288px]">
-            <img
-              src={butterflyEffect || "/placeholder.svg"}
-              alt="Butterfly Effect"
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
-      </div>
+      <div className="relative justify-center items-center  md:h-[300px] md:w-[1400px] w-[330px] h-[80px] rounded-[12px] bg-black overflow-hidden ">
+      <HoverStackImages images={images} />
+    </div>
+
+
 
       {/* Content Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-12">
         {/* Left Panel */}
         <div className="border-2 border-[#161616] rounded-[20px]">
           <video
