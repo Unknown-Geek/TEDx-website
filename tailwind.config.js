@@ -35,6 +35,10 @@ module.exports = {
           '100%': { opacity: '0' }
         }
       },
+      colors: {
+        'brand-red': '#e31c25',
+        'brand-dark-red': '#bb000e',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
