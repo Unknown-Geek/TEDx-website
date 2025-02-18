@@ -25,6 +25,10 @@ module.exports = {
           '100%': { transform: 'translateY(-50%)' }
         }
       },
+      colors: {
+        'brand-red': '#e31c25',
+        'brand-dark-red': '#bb000e',
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

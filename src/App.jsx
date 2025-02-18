@@ -17,7 +17,9 @@ import Highlights_title from "./components/Highlights_title"
 import Highlights_text from "./components/Highlights_text"
 import Highlights from "./components/Highlights"
 import Ticket from "./components/Ticket"
-import WebTeam from "./components/WebTeam"
+import Merch from "./components/Merch"
+//import WebTeam from "./components/WebTeam"
+
 import "./styles/ScrollingText.css"
 
 function MainContent({ entryCompleted, setEntryCompleted, transitionSpeed }) {
@@ -89,11 +91,14 @@ export default function App() {
               />
             }
           />
-          <Route path="/team" element={<WebTeam />} />
+
+          
+          <Route path="/merch" element={<Merch/>} />
         </Routes>
         <Analytics />
       </div>
     </BrowserRouter>
   )
 }
+/*<Route path="/web-team" element={<WebTeam />} />  */
 
