@@ -97,7 +97,7 @@ function AnimatedRoutes({ entryCompleted, setEntryCompleted, transitionSpeed }) 
                 duration: 0.3,
                 ease: [0.43, 0.13, 0.23, 0.96]
               }}
-              className="w-screen h-full md:h-screen"
+              className="w-screen h-full"
             >
               <WebTeam />
             </motion.div>

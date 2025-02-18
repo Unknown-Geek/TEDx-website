@@ -60,7 +60,7 @@ export default function Merch() {
           <div className="md:pl-44 pt-8 flex items-center justify-center w-full h-full">
             <video src={ts} autoPlay loop muted playsInline className="object-cover w-[500px]"></video>
           </div>
-          <div className="overflow-hidden h-full object-fill mix-blend-lighten md:pl-40 -mt-60 md:-mt-80 flex items-center justify-center">
+          <div className="overflow-hidden h-full object-fill mix-blend-lighten md:pl-40 -mt-60 md:-mt-10 flex items-center justify-center">
             <img src={gradient || "/placeholder.svg"} alt="gradient" className="w-full h-[800px] object-scale-down" />
           </div>
         </div>
