@@ -16,7 +16,7 @@ import Highlights_text from "./components/Highlights_text"
 import Highlights from "./components/Highlights"
 import Ticket from "./components/Ticket"
 import Merch from "./components/Merch"
-
+import WebTeam from "./components/WebTeam"
 
 
 import "./styles/ScrollingText.css"
@@ -87,6 +87,7 @@ function AnimatedRoutes({ entryCompleted, setEntryCompleted, transitionSpeed }) 
             </motion.div>
           }
         />
+        <Route path="/webteam" element={<WebTeam />} />
        
       </Routes>
     </AnimatePresence>

@@ -8,6 +8,7 @@ import b2 from "/public/assets/butterfly-2.png"
 import gradient from "/public/assets/grabyou.png"
 import ts from "/public/assets/tshirt.mp4"
 import { useNavigate } from "react-router-dom"
+import gbtext from "/public/assets/grabyourtext.png"
 
 export default function Merch() {
   const [isHovered, setIsHovered] = useState(false)
@@ -29,25 +30,12 @@ export default function Merch() {
             <img src={tedx || "/placeholder.svg"} alt="tedx" className="max-w-[200px] md:max-w-none" />
           </div>
 
-          <div className="flex flex-col tracking-[-0.03em] leading-[0.87] text-[60px] md:text-[90px] lg:text-[123px] font-bold">
-            <p className="m-0">GRAB</p>
-            <p className="m-0">YOUR</p>
-            <p className="m-0">TEES</p>
-            <p className="m-0">NOW</p>
-          </div>
+           <div className="flex justify-center items-center
+           w-[300px] h-[300px] md:w-[500px] md:h-[500px] md:-ml-36 -ml-20">
+            <img src={gbtext || "/placeholder.svg"} alt="grab your text" className="max-w-[200px] md:max-w-none" />
+           </div>
 
-          <div className="relative w-full h-0">
-            <img
-              src={b1 || "/placeholder.svg"}
-              alt="butterfly"
-              className="absolute lg:-left-[6%] lg:top-[-400px] w-[15vw] max-w-[150px] min-w-[80px]"
-            />
-            <img
-              src={b2 || "/placeholder.svg"}
-              alt="butterfly"
-              className="absolute top-[-120px] left-[15%] lg:top-[-120px] w-[12vw] max-w-[120px] min-w-[60px]"
-            />
-          </div>
+       
 
           <button 
             className={`w-auto h-auto rounded-[15.26px] border-[2.3px] border-[#161616] shadow-[inset_0px_0px_10.84px_rgba(227,28,37,0.6)] overflow-hidden   
