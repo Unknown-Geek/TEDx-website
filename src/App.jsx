@@ -18,7 +18,7 @@ import Highlights_text from "./components/Highlights_text"
 import Highlights from "./components/Highlights"
 import Ticket from "./components/Ticket"
 import Merch from "./components/Merch"
-//import WebTeam from "./components/WebTeam"
+import WebTeam from "./components/WebTeam"
 
 import "./styles/ScrollingText.css"
 
@@ -94,6 +94,7 @@ export default function App() {
 
           
           <Route path="/merch" element={<Merch/>} />
+          <Route path="/team" element={<WebTeam />} />
         </Routes>
         <Analytics />
       </div>
