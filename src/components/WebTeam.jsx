@@ -75,7 +75,7 @@ const WebTeam = () => {
                             {isAnimationPlaying && (
                                 <div className="absolute top-6 -right-14 w-24 h-24">
                                     <DotLottieReact
-                                        src="/public/assets/butterfly.lottie"
+                                        src="/assets/butterfly.lottie"
                                         autoplay
                                         loop={false}
                                     />
@@ -125,7 +125,7 @@ const WebTeam = () => {
                                 {isAnimationPlaying && (
                                     <div className="absolute top-0 right-0 w-24 h-24">
                                         <DotLottieReact
-                                            src="/public/assets/butterfly.lottie"
+                                            src="/assets/butterfly.lottie"
                                             autoplay
                                             loop={false}
                                         />
