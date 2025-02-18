@@ -24,9 +24,9 @@ export const ScrollingText = ({ className = "", dark = false, direction = "left"
 export const About = () => {
   const stats = [
     { number: "5", text: "Events" },
-    { number: "50", text: "Speakers" },
-    { number: "100", text: "Active Members" },
-    { number: "50", text: "Community Members" },
+    { number: "25", text: "Speakers" },
+    { number: "20", text: "Community Members" },
+    { number: "50", text: "Active Members" },
   ];
 
   return (

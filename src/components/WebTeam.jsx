@@ -12,14 +12,17 @@ import exe6 from "/public/assets/06.webp";
 import exe7 from "/public/assets/07.webp";
 import exe8 from "/public/assets/08.webp";
 import exe9 from "/public/assets/09.webp";
+import exe11 from "/public/assets/11.webp";
+import exe12 from "/public/assets/12.webp";
 import exe13 from "/public/assets/13.webp";
+import exe14 from "/public/assets/14.webp";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 
 const WebTeam = () => {
     const [isAnimationPlaying, setIsAnimationPlaying] = useState(false);
     const [fadeState, setFadeState] = useState('hidden'); // hidden, fadeIn, visible, fadeOut
-    
+
 
     const handleExe9Click = () => {
         if (!isAnimationPlaying) {
@@ -159,8 +162,17 @@ const WebTeam = () => {
                         <div className="flex flex-col ">
                             <img src={exe8} alt="Execom 8" className="h-[330px] w-[461px] " />
                         </div>
+                        <div className="flex flex-col  pt-56 ">
+                            <img src={exe11} alt="Execom 11" className="h-[330px] w-[461px] " />
+                        </div>
+                        <div className="flex flex-col">
+                            <img src={exe12} alt="Execom 12" className="h-[330px] w-[461px] " />
+                        </div>
                         <div className="flex flex-col pt-56">
                             <img src={exe13} alt="Execom 13" className="h-[330px] w-[461px] " />
+                        </div>
+                        <div className="flex flex-col ">
+                            <img src={exe14} alt="Execom 14" className="h-[330px] w-[577px] " />
                         </div>
                     </div>
                     {/* Duplicate set for seamless looping */}
@@ -209,6 +221,18 @@ const WebTeam = () => {
                         <div className="flex flex-col pt-56">
                             <img src={exe13} alt="Execom 13" className="h-[330px] w-[461px] " />
                         </div>
+                        <div className="flex flex-col  pt-56 ">
+                            <img src={exe11} alt="Execom 11" className="h-[330px] w-[461px] " />
+                        </div>
+                        <div className="flex flex-col">
+                            <img src={exe12} alt="Execom 12" className="h-[330px] w-[461px] " />
+                        </div>
+                        <div className="flex flex-col pt-56">
+                            <img src={exe13} alt="Execom 13" className="h-[330px] w-[461px] " />
+                        </div>
+                        <div className="flex flex-col ">
+                            <img src={exe14} alt="Execom 14" className="h-[330px] w-[577px] " />
+                        </div>
                     </div>
                 </div>
 
@@ -243,7 +267,10 @@ const WebTeam = () => {
                             <img src={exe6} alt="Execom 6" className="w-full h-auto" />
                             <img src={exe7} alt="Execom 7" className="w-full h-auto" />
                             <img src={exe8} alt="Execom 8" className="w-full h-auto" />
+                            <img src={exe11} alt="Execom 11" className="w-full h-auto" />
+                            <img src={exe12} alt="Execom 12" className="w-full h-auto" />
                             <img src={exe13} alt="Execom 13" className="w-full h-auto" />
+                            <img src={exe14} alt="Execom 14" className="w-full h-auto" />
                         </div>
                         {/* Duplicate set for seamless looping */}
                         <div className="flex flex-col gap-8 px-4">
@@ -272,7 +299,10 @@ const WebTeam = () => {
                             <img src={exe6} alt="Execom 6" className="w-full h-auto" />
                             <img src={exe7} alt="Execom 7" className="w-full h-auto" />
                             <img src={exe8} alt="Execom 8" className="w-full h-auto" />
+                            <img src={exe11} alt="Execom 11" className="w-full h-auto" />
+                            <img src={exe12} alt="Execom 12" className="w-full h-auto" />
                             <img src={exe13} alt="Execom 13" className="w-full h-auto" />
+                            <img src={exe14} alt="Execom 14" className="w-full h-auto" />
                         </div>
                     </div>
                 </div>

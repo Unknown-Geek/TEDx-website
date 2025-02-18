@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 
 // Configure event date - Using Date object directly for better timezone handling
-const EVENT_DATE = new Date(2025, 2, 8, 9, 0, 0); // March 2nd, 2025, 9:00 AM
+const EVENT_DATE = new Date(2025, 2, 8, 9, 0, 0); // March 8th, 2025, 9:00 AM
 
 const TimerUnit = ({ value, label }) => (
   <div className="flex flex-col justify-center items-center">
-    <div className="text-2xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-9xl font-microgramma font-bold text-[#161616] leading-none sm:leading-normal">
+    <div className="text-4xl sm:text-3xl md:text-5xl lg:text-7xl xl:text-9xl font-microgramma font-bold text-[#161616] leading-none sm:leading-normal">
       {value.toString().padStart(2, '0')}
     </div>
-    <div className="text-xs sm:text-sm md:text-lg lg:text-2xl xl:text-4xl font-vanguard font-normal text-[#161616] leading-tight sm:leading-normal tracking-wider">
+    <div className="text-base sm:text-sm md:text-lg lg:text-2xl xl:text-4xl font-vanguard font-normal text-[#161616] leading-tight sm:leading-normal tracking-wider">
       {label}
     </div>
   </div>
@@ -89,9 +89,9 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-20 pt-8 sm:pt-12 md:pt-16 lg:pt-20">
+    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-20 pt-8 sm:pt-12 md:pt-12 lg:pt-12  sm:pb-5 md:pb-5 lg:pb-5">
       {/* Countdown Timer */}
-      <div className="w-full max-w-[95%] mx-auto pt-2 sm:pt-4 md:pt-6 lg:pt-[29px] px-2 py-2 sm:px-4 md:px-6 lg:px-8 mb-4 sm:mb-6 md:mb-8 
+      <div className="w-full max-w-[95%] mx-auto sm:pt-4 md:pt-6 lg:pt-[29px] px-2 md:py-2 py-2 sm:px-4 md:px-6 lg:px-8 mb-8 sm:mb-6 md:mb-8 
                     bg-[rgba(250,250,250,0.50)] rounded-lg sm:rounded-[20px] 
                     border-2 sm:border-3 md:border-4 lg:border-[5px] border-[#E31C25] 
                     backdrop-blur-[6.4px] flex justify-center items-center gap-1 sm:gap-2">
@@ -105,7 +105,7 @@ const Countdown = () => {
       </div>
       
       {/* Hurry Up Text Row */}
-      <div className="flex justify-center items-center -mt-2 sm:-mt-3 md:-mt-4 pt-3 sm:pt-4 md:pt-5">
+      <div className="flex justify-center items-center -mt-2 sm:-mt-3 md:-mt-4 pt-3 sm:pt-4 md:pt-10">
         <HurryUpAnimation />
       </div>
     </div>
