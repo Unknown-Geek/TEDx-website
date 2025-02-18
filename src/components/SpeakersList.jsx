@@ -1,39 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
-import image from "/public/assets/speaker-cropped.svg"
+import image from "/public/assets/speaker-temp.svg"
 
-const testimonials = [
-    {
-        id: 1,
-        name: "HANI MUSTHAFA 1",
-        occupation: "Automotive Journalist",
-        testimonial: "South India's leading automotive journalist has been the region's sole juror for the World Car Awards since 2019. His expertise and discerning eye for quality have earned him recognition in the industry, allowing him to influence the selection of the best vehicles globally. In 2010, he launched the Flywheel Auto Show, which has grown into a prominent hub for auto events, content creators, and multi-brand garages. The show not only highlights the latest trends and innovations in the automotive world but also serves as a platform for networking and collaboration among industry professionals."
-    },
-    {
-        id: 2,
-        name: "HANI MUSTHAFA 2",
-        occupation: "Automotive Journalist",
-        testimonial: "South India's leading automotive journalist has been the region's sole juror for the World Car Awards since 2019. His expertise and discerning eye for quality have earned him recognition in the industry, allowing him to influence the selection of the best vehicles globally. In 2010, he launched the Flywheel Auto Show, which has grown into a prominent hub for auto events, content creators, and multi-brand garages. The show not only highlights the latest trends and innovations in the automotive world but also serves as a platform for networking and collaboration among industry professionals."
-    },
-    {
-        id: 3,
-        name: "HANI MUSTHAFA 3",
-        occupation: "Automotive Journalist",
-        testimonial: "South India's leading automotive journalist has been the region's sole juror for the World Car Awards since 2019. His expertise and discerning eye for quality have earned him recognition in the industry, allowing him to influence the selection of the best vehicles globally. In 2010, he launched the Flywheel Auto Show, which has grown into a prominent hub for auto events, content creators, and multi-brand garages. The show not only highlights the latest trends and innovations in the automotive world but also serves as a platform for networking and collaboration among industry professionals."
-    },
-    {
-        id: 4,
-        name: "HANI MUSTHAFA 6",
-        occupation: "Automotive Journalist",
-        testimonial: "South India's leading automotive journalist has been the region's sole juror for the World Car Awards since 2019. His expertise and discerning eye for quality have earned him recognition in the industry, allowing him to influence the selection of the best vehicles globally. In 2010, he launched the Flywheel Auto Show, which has grown into a prominent hub for auto events, content creators, and multi-brand garages. The show not only highlights the latest trends and innovations in the automotive world but also serves as a platform for networking and collaboration among industry professionals."
-    },
-    {
-        id: 5,
-        name: "HANI MUSTHAFA 5",
-        occupation: "Automotive Journalist",
-        testimonial: "South India's leading automotive journalist has been the region's sole juror for the World Car Awards since 2019. His expertise and discerning eye for quality have earned him recognition in the industry, allowing him to influence the selection of the best vehicles globally. In 2010, he launched the Flywheel Auto Show, which has grown into a prominent hub for auto events, content creators, and multi-brand garages. The show not only highlights the latest trends and innovations in the automotive world but also serves as a platform for networking and collaboration among industry professionals."
-    },
-];
+// Keep the original testimonials array commented out for later use
+// const testimonials = [ ... ];
+
+// Temporary data structure
+const temporaryTestimonials = Array(5).fill({
+    id: 1,
+    name: "COMING SOON",
+    occupation: "Speaker Details",
+    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
+});
 
 const SpeakersList = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -54,17 +32,17 @@ const SpeakersList = () => {
         setDirection(newDirection);
         if (newDirection === 'up') {
             setCurrentIndex((prev) =>
-                prev === testimonials.length - 1 ? 0 : prev + 1
+                prev === temporaryTestimonials.length - 1 ? 0 : prev + 1
             );
         } else {
             setCurrentIndex((prev) =>
-                prev === 0 ? testimonials.length - 1 : prev - 1
+                prev === 0 ? temporaryTestimonials.length - 1 : prev - 1
             );
         }
     };
 
     const getSlidePosition = (index) => {
-        const position = (index - currentIndex + testimonials.length) % testimonials.length;
+        const position = (index - currentIndex + temporaryTestimonials.length) % temporaryTestimonials.length;
         const baseClasses = 'absolute w-full flex max-w-5xl mx-auto bg-white p-4 md:p-6 rounded-lg shadow-lg transition-all duration-500 ease-in-out border-[2px] border-red-500 shadow-[0_0_18px_rgba(239,68,68,0.6)]';
 
         if (position === 0) {
@@ -73,10 +51,10 @@ const SpeakersList = () => {
         if (position === 1) {
             return `${baseClasses} translate-y-32 md:translate-y-48 scale-95 opacity-60 z-10`;
         }
-        if (position === testimonials.length - 1) {
+        if (position === temporaryTestimonials.length - 1) {
             return `${baseClasses} -translate-y-32 md:-translate-y-48 scale-95 opacity-60 z-10`;
         }
-        return `${baseClasses} ${position < testimonials.length / 2 ? 'translate-y-48' : '-translate-y-48'} scale-90 opacity-0 z-0`;
+        return `${baseClasses} ${position < temporaryTestimonials.length / 2 ? 'translate-y-48' : '-translate-y-48'} scale-90 opacity-0 z-0`;
     };
 
     return (
@@ -102,19 +80,18 @@ const SpeakersList = () => {
                     onMouseEnter={() => setIsAutoPlaying(false)}
                     onMouseLeave={() => setIsAutoPlaying(false)}
                 >
-                    {testimonials.map((testimonial, index) => (
+                    {temporaryTestimonials.map((testimonial, index) => (
                         <div
-                            key={testimonial.id}
+                            key={index}
                             className={getSlidePosition(index)}
                         >
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
                                 {/* Left Section - Image and TEDx Speaker */}
                                 <div className="flex flex-col items-center justify-center space-y-4">
-                                    <div className="w-full max-w-md">
-                                        <img src={image} alt={testimonial.name} className="w-full h-auto " />
+                                    <div className="w-full max-w-md opacity-100">
+                                        <img src={image} alt="Coming Soon" className="w-full h-auto  " />
                                     </div>
-                                    <div className=' flex-row hidden md:flex '><p className='font-vanguard text-4xl md:text-5xl text-red-600 font-medium'>TEDx</p><p className='font-vanguard text-4xl md:text-5xl text-black font-medium'>SPEAKER</p> </div>
-
+                                    <div className='flex-row hidden md:flex'><p className='font-vanguard text-4xl md:text-5xl text-red-600 font-medium'>TEDx</p><p className='font-vanguard text-4xl md:text-5xl text-black font-medium'>SPEAKER</p></div>
                                 </div>
 
                                 {/* Right Section - Name, Occupation, and Testimonial */}

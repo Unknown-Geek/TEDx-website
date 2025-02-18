@@ -24,7 +24,7 @@ const cards = [
     id: 2,
     name: "DR. SULPHI NOOHU",
     image: image0,
-    occupation: "ENT Surgeon",
+    occupation: "ENT SURGEON",
     about: "Dr. Sulphi Noohu, a distinguished EMT Surgeon, has been a tireless advocate for the rights and welfare of doctors and other healthcare workers. He has been associated with Indian Medical Association for more than 25 years. He has played a crucial role in coordinating relief efforts and providing medical assistance to those affected by pandemic. Outside his medical field, Dr.Noohu is a recognized writer and social media influencer, focusing on health related topics."
   },
   {
@@ -45,7 +45,7 @@ const cards = [
     id: 5,
     name: "MANOJ RAGHAVAN",
     image: image4,
-    occupation: "CEO AND MD, TATA Elxsi",
+    occupation: "CEO AND MD, TATA ELXSI",
     about: "Manoj Raghavan is the current CEO and MD of Tata Elxsi. Tata Elxsi has been delivering cutting edge tech services to global companies for many years. Under his Leadership, Tata Elxsi has grown into a major competitor in the Industrial design market. The company's shift to Design Digital, catering to the growing world of digital marketing and development, shows hid strong vision and future outlook."
   },
   {
