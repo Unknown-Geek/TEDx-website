@@ -64,11 +64,11 @@ const Home = () => {
                 {item.item}
               </a>
             ))}
-            <a href="#ticket"
+            <a href="merch"
               className="px-3 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-xl font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Book Tickets
+              Buy Merch
             </a>
           </div>
         </div>

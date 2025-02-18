@@ -14,7 +14,7 @@ export default function Merch() {
   const [isHovered, setIsHovered] = useState(false)
 
   return (
-    <div className="w-full h-full bg-[#161616] overflow-hidden text-[#fafafa] font-vanguard">
+    <div className="w-full h-full md:h-screen bg-black overflow-hidden text-[#fafafa] font-vanguard">
       {/* Main content */}
     
       <div className="flex flex-col lg:flex-row overflow-hidden space-y-10 ">
