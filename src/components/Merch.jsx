@@ -14,7 +14,7 @@ export default function Merch() {
   const navigate = useNavigate()
 
   return (
-    <div className="w-screen h-screen bg-black overflow-hidden text-[#fafafa] font-vanguard">
+    <div className="w-screen h-full md:h-screen bg-black overflow-hidden text-[#fafafa] font-vanguard">
       <div className="flex flex-col lg:flex-row overflow-hidden space-y-10 h-full">
         <div className="pt-10 flex flex-col gap-10 items-start px-6 md:px-28 max-w-[550px]">
           <button
