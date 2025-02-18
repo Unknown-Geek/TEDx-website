@@ -39,8 +39,7 @@ export default function Entry({ onScrollUp }) {
         playsInline
         className="absolute inset-0 w-full h-full object-contain md:object-cover"
       >
-        <source src="/assets/Intro.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
+        <source src="/assets/Intro.mp4" type="video/mp4"/>
       </video>
 
       {/* Scroll-Up Icon (Now visible from the start & clickable) */}
