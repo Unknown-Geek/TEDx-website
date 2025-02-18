@@ -12,8 +12,10 @@ module.exports = {
         'avantgarde': ['AvantGarde', 'sans-serif'],
       },
       animation: {
-        scroll: 'scroll 40s linear infinite',
-        'scroll-vertical': 'scrollVertical 25s linear infinite',
+        scroll: 'scroll 80s linear infinite',
+        'scroll-vertical': 'scrollVertical 50s linear infinite',
+        fadeIn: 'fadeIn 500ms ease-in-out forwards',
+        fadeOut: 'fadeOut 500ms ease-in-out forwards',
       },
       keyframes: {
         scroll: {
@@ -23,6 +25,14 @@ module.exports = {
         scrollVertical: {
           '0%': { transform: 'translateY(0)' },
           '100%': { transform: 'translateY(-50%)' }
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' }
+        },
+        fadeOut: {
+          '0%': { opacity: '1' },
+          '100%': { opacity: '0' }
         }
       },
       colors: {
