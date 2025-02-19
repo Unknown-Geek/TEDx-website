@@ -16,7 +16,6 @@ import Highlights_text from "./components/Highlights_text"
 import Highlights from "./components/Highlights"
 import Ticket from "./components/Ticket"
 import Merch from "./components/Merch"
-import WebTeam from "./components/WebTeam"
 
 import "./styles/ScrollingText.css"
 
@@ -86,23 +85,9 @@ function AnimatedRoutes({ entryCompleted, setEntryCompleted, transitionSpeed }) 
             </motion.div>
           }
         />
-        <Route
-          path="/team"
-          element={
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{
-                duration: 0.3,
-                ease: [0.43, 0.13, 0.23, 0.96]
-              }}
-              className="w-screen h-full md:h-screen"
-            >
-              <WebTeam />
-            </motion.div>
-          }
-        />
+       
+           
+  
 
       </Routes>
     </AnimatePresence>

@@ -15,7 +15,7 @@ export default function Merch() {
   const navigate = useNavigate()
 
   return (
-    <div className="w-screen h-full md:h-screen bg-black overflow-hidden text-[#fafafa] font-vanguard">
+    <div className="w-full h-full md:h-screen bg-black overflow-hidden text-[#fafafa] font-vanguard ">
       <div className="flex flex-col lg:flex-row overflow-hidden space-y-10 h-full">
         <div className="pt-10 flex flex-col gap-10 items-start px-6 md:px-28 max-w-[550px]">
           <button
@@ -26,19 +26,19 @@ export default function Merch() {
             <span>Home</span>
           </button>
 
-          <div className="pt-20">
-            <img src={tedx || "/placeholder.svg"} alt="tedx" className="max-w-[200px] md:max-w-none" />
+          <div className="pt-20 pb-8">
+            <img src={tedx || "/placeholder.svg"} alt="tedx" className="max-w-[200px] md:max-w-96" />
           </div>
 
            <div className="flex justify-center items-center
-           w-[300px] h-[300px] md:w-[500px] md:h-[500px] md:-ml-36 -ml-20">
+           w-[300px] h-[300px] md:w-[400px] md:h-[400px] md:-ml-20 -ml-20">
             <img src={gbtext || "/placeholder.svg"} alt="grab your text" className="max-w-[200px] md:max-w-none" />
            </div>
 
        
 
           <button 
-            className={`w-auto h-auto rounded-[15.26px] border-[2.3px] border-[#161616] shadow-[inset_0px_0px_10.84px_rgba(227,28,37,0.6)] overflow-hidden   
+            className={`w-auto h-auto rounded-[15.26px] border-[2.3px] border-[#161616]  shadow-[inset_0px_0px_10.84px_rgba(227,28,37,0.6)] overflow-hidden   
             ${
               isHovered
                 ? "bg-white text-black border-[#BB000E] shadow-[inset_0px_0px_14px_rgba(0,0,0,0.6)]"
@@ -60,7 +60,7 @@ export default function Merch() {
           <div className="md:pl-44 pt-8 flex items-center justify-center w-full h-full">
             <video src={ts} autoPlay loop muted playsInline className="object-cover w-[500px]"></video>
           </div>
-          <div className="overflow-hidden h-full object-fill mix-blend-lighten md:pl-40 -mt-60 md:-mt-80 flex items-center justify-center">
+          <div className="overflow-hidden h-full object-fill mix-blend-lighten md:pl-40 -mt-60 md:-mt flex items-center justify-center">
             <img src={gradient || "/placeholder.svg"} alt="gradient" className="w-full h-[800px] object-scale-down" />
           </div>
         </div>
