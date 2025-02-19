@@ -23,10 +23,10 @@ export const ScrollingText = ({ className = "", dark = false, direction = "left"
 
 export const About = () => {
   const stats = [
-    { number: "5", text: "Events" },
+    
     { number: "25", text: "Speakers" },
-    { number: "20", text: "Community Members" },
-    { number: "50", text: "Active Members" },
+    { number: "50", text: "Community Members" },
+    { number: "20", text: "Active Members" },
   ];
 
   return (
@@ -60,7 +60,16 @@ export const About = () => {
         {/* Right Section (Stats) */}
         <div className="flex-1 h-full items-center justify-center p-6 lg:p-14 bg-[#FAFAFA]">
           <div className="flex flex-col items-center justify-center w-full max-w-[600px] gap-5 md:gap-1">
-            {stats.map((stat, index) => (
+          <div className="flex flex-col items-end justify-center md:h-[200px] h-[200px] ">
+                    <span className=" pr-20 mr-12 text-[100px] h-[100px] md:h-[200px] md:mr-12 md:pr-20 md:text-[300px] sm:text-[120px] lg:text-[100px] font-sans font-extrabold leading-none bg-gradient-to-b from-[#E31C25] to-[#BB000E] bg-clip-text text-transparent">
+                      4
+                    </span>
+                    <span className="pr-20 mr-10 md:pr-20 md:mr-5 text-[40px] sm:text-[50px] lg:text-[60px] text-[#161616] font-vanguard font-medium text-center whitespace-nowrap mt-[-10px] lg:mt-[-20px]">Events</span>
+                    <div className="w-full max-w-[292px] my-2 lg:my-4">
+                    <img src={line1 || "/placeholder.svg"} alt="Divider" className="w-full h-[2px]" />
+                  </div>
+                    </div>
+            {stats.map((stat, index) => ( 
               <React.Fragment key={index}>
                 <div className="flex flex-col items-center justify-center">
                   <div className="flex items-end justify-center">
