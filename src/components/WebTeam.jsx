@@ -16,7 +16,7 @@ import exe11 from "/public/assets/11.webp";
 import exe12 from "/public/assets/12.webp";
 import exe13 from "/public/assets/13.webp";
 import exe14 from "/public/assets/14.webp";
-//import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 
 const WebTeam = () => {
@@ -83,7 +83,7 @@ const WebTeam = () => {
             </div>
             <div className='w-screen h-[2px] bg-white mb-4'></div>
             <div className='w-screen md:flex md:flex-row flex-col justify-center md:gap-1 items-center'>
-                <div className="md:flex md:flex-row flex-col grid grid-cols-2 gap-4 px-4 md:grid-cols-none md:gap-1">
+                <div className="md:flex md:flex-row flex-col grid grid-cols-2  md:grid-cols-none md:gap-1">
                     <img
                         className='md:h-[723px] md:w-[350px] h-[361px] w-[175px]  mx-auto'
                         src={image1}
@@ -109,8 +109,8 @@ const WebTeam = () => {
 
             {/* Add EXECOM section */}
             <div className='flex flex-row justify-center md:justify-start items-center gap-3 pt-4 w-screen md:pl-9  pb-3'>
-                <h1 className='text-[55px]  font-vanguard text-white font-semibold'>EXECUTIVE</h1>
-                <h1 className='text-[55px]   font-vanguard text-red-600 font-semibold'>COMMITTEE</h1>
+                <h1 className='text-[52px]  font-vanguard text-white font-semibold'>EXECUTIVE</h1>
+                <h1 className='text-[52px]   font-vanguard text-red-600 font-semibold'>COMMITTEE</h1>
             </div>
             <div className='w-screen h-[2px] bg-white'></div>
 
