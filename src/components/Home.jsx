@@ -118,10 +118,10 @@ const Home = () => {
           </div>
         </div>
       ), {
-        duration: 5000, // Auto-dismiss after 5s
+        duration: 4000, // Auto-dismiss after 5s
         position: "bottom-right",
       });
-    }, 2000);
+    }, 5000);
 
     return () => clearTimeout(showToastTimer);
   }
