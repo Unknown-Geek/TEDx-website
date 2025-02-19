@@ -141,7 +141,7 @@ const Home = () => {
       )}
 
       {/* Hero Section */}
-      <div className="relative justify-center items-center md:h-[300px] md:w-[1500px] w-full h-[100px] rounded-[12px] bg-black  overflow-hidden ">
+      <div className="relative justify-center items-center md:h-[300px] md:w-[1520px] w-full h-[100px] rounded-[12px] bg-black  overflow-hidden ">
       <HoverStackImages images={images} />
     </div>
 
