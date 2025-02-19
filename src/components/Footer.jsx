@@ -45,7 +45,7 @@ const Footer = () => {
               WITH US ON
             </div>
           </div>
-          <div className="justify-center items-center  pr-7 flex  gap-12 left-[23px] top-[400px] pl-8 pt-5 ">
+          <div className="justify-center items-center  pr-7 flex  md:gap-24 left-[23px] top-[400px] pl-8 pt-5 ">
             <SocialIcons />
           </div>
         </div>

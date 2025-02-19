@@ -34,7 +34,7 @@ const SocialIcons = () => {
     },
     {
       name: "Gmail",
-      link: "mailto:your-email@gmail.com",
+      link: "https://mail.google.com/mail/u/0/#inbox?compose=DmwnWtDwjRlvSpgjhvWqJBFHPhHMfXchdLZZKlzKMnGpQZdklpztQfNHwXfxlgTNbJKQtQDzVlQB",
       defaultImg: MailIcon,
       hoverImg: mail_hover,
     },
@@ -44,12 +44,8 @@ const SocialIcons = () => {
       defaultImg: LinkedinIcon,
       hoverImg: linkedin_hover,
     },
-    {
-      name: "WhatsApp",
-      link: "",
-      defaultImg: WhatsappIcon,
-      hoverImg: whatsapp_hover,
-    },
+    
+    
   ];
 
   return (
@@ -66,7 +62,7 @@ const SocialIcons = () => {
           <img
             src={hoveredIcon === icon.name ? icon.hoverImg : icon.defaultImg}
             alt={icon.name}
-            className="w-16 h-16 transition-all duration-300"
+            className="md:w-28 md:h-20 w-16 h-14 transition-all duration-300"
           />
         </a>
       ))}
