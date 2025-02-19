@@ -50,7 +50,7 @@ const cards = [
   },
   {
     id: 6,
-    name: "P RADHAKRISHNAN",
+    name: "K RADHAKRISHNAN",
     image: image5,
     occupation: "VETERAN SPACE SCIENTIST",
     about: "P Radhakrishnan is a veteran space scientist, author and speaker who worked at ISRO as the Deputy Director of Liquid Propulsion System Centre. He was involved in the development of India’s early satellites like Aryabhata, Rohini, APPLE, and later the INSAT satellites. His greatest feat was being one of two Indian scientist trained by NASA to be a payload specialist for the ST61-I Challenger mission, which was cancelled after the Challenger disaster of 1986. He has also co- authored the book A Brief History of Rocketry in ISRO."
