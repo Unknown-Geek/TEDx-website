@@ -37,7 +37,7 @@ export default function Merch() {
 
        
 
-          <button 
+          <button onClick={() => window.open("https://forms.gle/dnfMenCtWvWt9ahQ9", "_blank")}
             className={`w-auto h-auto rounded-[15.26px] border-[2.3px] border-[#161616]  shadow-[inset_0px_0px_10.84px_rgba(227,28,37,0.6)] overflow-hidden   
             ${
               isHovered

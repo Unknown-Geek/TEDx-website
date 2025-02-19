@@ -176,7 +176,7 @@ const Home = () => {
         </div>
 
         {/* Right Panel */}
-        <div className="rounded-[20px] flex flex-col gap-4 md:gap-6 md:col-span-2 lg:col-span-1">
+        <div className="rounded-[20px] flex flex-col gap-4 md:gap-6 md:col-span-2 lg:col-span-1 ">
           {/* Book Tickets Button */}
           <button
             className={`w-full text-4xl min-w-[200px] sm:min-w-[160px] whitespace-nowrap 
@@ -198,8 +198,8 @@ const Home = () => {
           </button>
 
           {/* Date Display */}
-          <div className="bg-[#161616] rounded-[20px] h-[200px] sm:h-[250px] md:h-[325px] flex justify-center items-center">
-            <Lottie animationData={dateLottie} />
+          <div className="bg-[#161616] rounded-[20px] h-[200px] sm:h-[250px] md:h-[325px] flex px-6 md:px-0 justify-center items-center object-fill">
+            <Lottie animationData={dateLottie}  />
           </div>
         </div>
       </div>
