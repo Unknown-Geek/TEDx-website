@@ -63,7 +63,7 @@ const Footer = () => {
           <div className=" left-[87px] top-[265px] text-right text-[#FAFAFA] text-[19px] md:text-[29px] font-bold font-[Microgramma] h-[50px]">
             <span className="pr-20 lg:pr-20 text-[#E31C25] ">7907982102</span>
           </div>
-          <div className="h-[30px] md:h-[50px] pl-16 left-[46px] text-[#FAFAFA] text-[19px] md:text-[29px] font-bold font-[Microgramma]">
+          <div className="h-[25px] md:h-[50px] pl-16 left-[46px] text-[#FAFAFA] text-[19px] md:text-[29px] font-bold font-[Microgramma]">
             EPHREM -
           </div>
 
