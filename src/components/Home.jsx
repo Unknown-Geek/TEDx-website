@@ -17,7 +17,7 @@ const HoverStackImages = ({ images }) => {
 
   return (
     <div
-      className=" w-[350px] h-[300px] sm:w-[300px] sm:h-[350px] mx-auto cursor-pointer"
+      className=" w-[350px] h-[300px] sm:w-[300px] sm:h-[350px] mx-auto  cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -26,7 +26,7 @@ const HoverStackImages = ({ images }) => {
           key={index}
           src={image}
           alt={`Image ${index + 1}`}
-          className={`absolute inset-0 md:ml-16 mx-auto md:w-[1400px] md:h-[300px] w-[300px] place-self-auto md:pt-16 md:pb-10 pt-8  object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out
+          className={`absolute inset-0 scale-90  mx-auto md:w-[1400px] md:h-[300px] w-[300px] place-self-auto md:pt-16 md:pb-10 pt-8  object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out
             ${isHovered ? getHoverTransform(index) : "translate-x-0 translate-y-0"}
           `}
           style={{ zIndex: images.length - index }}
@@ -70,7 +70,7 @@ const Home = () => {
   }
 
   return (
-    <div className="container p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20">
+    <div className="container p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20 mx-auto">
       {/* Navigation */}
       <nav className="flex  justify-between items-center gap-4 mb-6 md:mb-8">
         <div className="flex items-center justify-center bg-[#161616] rounded-[12px] w-[180px]">
@@ -141,7 +141,7 @@ const Home = () => {
       )}
 
       {/* Hero Section */}
-      <div className="relative justify-center items-center md:h-[300px] md:w-[1520px] w-full h-[100px] rounded-[12px] bg-black  overflow-hidden ">
+      <div className="relative justify-center items-center md:h-[300px] md:w-[1380px] w-full h-[100px] rounded-[12px] bg-black  overflow-hidden ">
       <HoverStackImages images={images} />
     </div>
 

@@ -27,7 +27,6 @@ export const About = () => {
     { number: "25", text: "Speakers" },
     { number: "50", text: "Community Members" },
     { number: "20", text: "Active Members" },
-    { number: "3",  text:  "Events"}
   ];
 
   return (
