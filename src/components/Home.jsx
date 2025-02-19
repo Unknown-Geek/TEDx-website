@@ -11,8 +11,9 @@ import logo from "/public/assets/Logo-White.png"
 import image1 from "/public/assets/image1.svg"
 import image2 from "/public/assets/image2.svg"
 import image3 from "/public/assets/image3.svg"
+import { Shirt } from "lucide-react"
 import toast, { Toaster } from 'react-hot-toast'
-
+import x from "/public/assets/close.svg"
 const HoverStackImages = ({ images }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -76,42 +77,55 @@ const Home = () => {
       // Wait 5 seconds before showing toast
       const showToastTimer = setTimeout(() => {
         const toastId = toast.custom((t) => (
-          <div className={`${t.visible ? 'animate-enter' : 'animate-leave'
-            } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto h-[110px] flex ring-1 ring-black ring-opacity-5 `}>
-            <div className="flex-1  w-0 p-4 border-2 rounded-lg rounded-r-lg">
-              <div className="flex items-start rounded-lg rounded-r-lg">
-                <div className="ml-3 flex-1 flex-col gap-14 rounded-lg rounded-r-lg">
-                  <p className="text-lg font-semibold  text-gray-900 ">
-                    Get Your TEDx Merch!
-                  </p>
-                  <p className="mt-1 text-sm font-medium text-black">
-                    <span className="font-bold text-red-600 text-lg">Limited Edition </span> T-Shirt available now
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="flex border-l border-gray-200 bg-gray-900 rounded-lg rounded-r-xl">
-              <button
-                onClick={() => {
-                  toast.dismiss(t.id)
-                  handleMerchClick()
-                }}
-                className="w-full  border border-transparent rounded-sm rounded-r-xl p-4 flex items-center justify-center  text-lg font-extrabold text-red-600 hover:text-[#8B000B] focus:outline-none"
-              >
-                Buy Now
-              </button>
-            </div>
+          <div
+          className={`${t.visible ? "animate-enter" : "animate-leave"
+            } max-w-sm w-full bg-white shadow-xl rounded-lg pointer-events-auto flex flex-col border border-[#161616] p-2`}
+        >
+          <div className="border border-[#161616] p-2 rounded-lg ">
+          {/* Close Button */}
+          <button
+            onClick={() => toast.dismiss(t.id)}
+            className="absolute top-2 right-2 text-[#161616] font-bold text-xl"
+          >
+            <img src={x} />
+          </button>
+
+          {/* Alert Heading */}
+          <div className="font-avantgarde flex items-center">
+            <span className="font-extrabold text-[#BB000E] text-3xl">
+              Alert
+            </span>
+            <span className="text-3xl text-[#161616]">!!</span>
           </div>
-        ), {
-          duration: 5000, // Auto dismiss after 5 seconds
-          position: 'bottom-right',
-        })
-      }, 2000)
 
-      return () => clearTimeout(showToastTimer)
-    }
-  }, [])
+          {/* Message Content */}
+          <p className="font-avantgarde text-[#161616] text-lg mt-2">
+            Our exclusive merch is selling fast! <br />
+            Don’t miss out on premium designs made just for you. <br />
+            Grab yours now before it’s gone!
+          </p>
 
+          {/* Buy Merch Button */}
+          <button
+            onClick={() => {
+              toast.dismiss(t.id);
+              handleMerchClick();
+            }}
+            className="bg-[#BB000E] text-[#FAFAFA] px-4 py-2 rounded-md mt-4 font-avantgarde"
+          >
+            Buy Merch
+          </button>
+          </div>
+        </div>
+      ), {
+        duration: 5000, // Auto-dismiss after 5s
+        position: "bottom-right",
+      });
+    }, 2000);
+
+    return () => clearTimeout(showToastTimer);
+  }
+}, []);
   return (
     <div className="container p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20 mx-auto">
       <Toaster /> {/* Add this near the top of your JSX */}
@@ -136,11 +150,12 @@ const Home = () => {
           ))}
           <button
             onClick={handleMerchClick}
-            className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-base lg:text-3xl font-vanguard hover:bg-[#FAFAFA] hover:text-[#BB000E]"
+            className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-base lg:text-3xl font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]"
           >
             Buy Merch
           </button>
         </div>
+       
         <button
           className="md:hidden p-2 border  border-[#161616] rounded-md"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -153,6 +168,7 @@ const Home = () => {
       {isMobileMenuOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-50 p-4">
           <div className="flex justify-end">
+           
             <button
               className="p-2 border border-[#161616] rounded-md"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -172,7 +188,10 @@ const Home = () => {
               </a>
             ))}
             <button
-              onClick={() => {
+              onClick={() => { <div className="flex items-center justify-center md:hidden ml-auto ">
+                {/* T-Shirt Merch Button */}
+                
+                </div>
                 setIsMobileMenuOpen(false)
                 handleMerchClick()
               }}
