@@ -32,7 +32,7 @@ const cards = [
     name: "ANJANA GOPAKUMAR",
     image: image1,
     occupation: "SOCIAL MEDIA INFLUENCER",
-    about: "Anjana Gopakumar, a social media influencer and a certified Foodie, is one of the people who is putting the region’s cuisines on the map. She is a food blogger and a restaurant consultant based in Thiruvananthapuram, running a blog and an instagram page titled Thank God I’m Fat — Big Heart, Bigger Appetite. She has worked for Uber Eats as a Marketing Manager in Kerala in 2018-19."
+    about: "Michael Chen has revolutionized social enterprise in Southeast Asia, creating sustainable business models that address critical community needs. His initiatives have impacted over 100,000 lives across the region."
   },
   {
     id: 4,
@@ -219,11 +219,11 @@ const PreviousSpeakers = () => {
                       className="flex flex-col items-center bg-white rounded-3xl overflow-hidden border-[2px] border-red-600 backface-hidden"
                       style={{ backfaceVisibility: 'hidden' }}
                     >
-                      <div className="relative h-[300px]">
+                      <div className="relative h-[300px] w-[300px]">
                         <img
                           src={card.image}
                           alt={card.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                         />
                       </div>
                       <div className="p-6">
