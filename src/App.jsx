@@ -62,7 +62,7 @@ function AnimatedRoutes({ entryCompleted, setEntryCompleted, transitionSpeed }) 
                   <Highlights_title />
                   <Highlights />
                   <Highlights_text />
-                  <Ticket />
+                  {/* <Ticket /> */}
                   <Footer />
                 </motion.div>
               )}

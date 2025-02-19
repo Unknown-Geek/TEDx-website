@@ -16,6 +16,7 @@ import exe11 from "/public/assets/11.webp";
 import exe12 from "/public/assets/12.webp";
 import exe13 from "/public/assets/13.webp";
 import exe14 from "/public/assets/14.webp";
+import exe10 from "/public/assets/10.webp";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 
@@ -162,16 +163,19 @@ const WebTeam = () => {
                         <div className="flex flex-col ">
                             <img src={exe8} alt="Execom 8" className="h-[330px] w-[461px] " />
                         </div>
-                        <div className="flex flex-col  pt-56 ">
+                        <div className="flex flex-col pt-56">
+                            <img src={exe10} alt="Execom 10" className="h-[330px] w-[461px] " />
+                        </div>
+                        <div className="flex flex-col  ">
                             <img src={exe11} alt="Execom 11" className="h-[330px] w-[461px] " />
                         </div>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col pt-56">
                             <img src={exe12} alt="Execom 12" className="h-[330px] w-[461px] " />
                         </div>
-                        <div className="flex flex-col pt-56">
+                        <div className="flex flex-col ">
                             <img src={exe13} alt="Execom 13" className="h-[330px] w-[461px] " />
                         </div>
-                        <div className="flex flex-col ">
+                        <div className="flex flex-col pt-56">
                             <img src={exe14} alt="Execom 14" className="h-[330px] w-[577px] " />
                         </div>
                     </div>
@@ -219,15 +223,15 @@ const WebTeam = () => {
                             <img src={exe8} alt="Execom 8" className="h-[330px] w-[461px] " />
                         </div>
                         <div className="flex flex-col pt-56">
-                            <img src={exe13} alt="Execom 13" className="h-[330px] w-[461px] " />
+                            <img src={exe10} alt="Execom 10" className="h-[330px] w-[461px] " />
                         </div>
-                        <div className="flex flex-col  pt-56 ">
+                        <div className="flex flex-col ">
                             <img src={exe11} alt="Execom 11" className="h-[330px] w-[461px] " />
                         </div>
-                        <div className="flex flex-col">
+                        <div className="flex flex-col pt-56">
                             <img src={exe12} alt="Execom 12" className="h-[330px] w-[461px] " />
                         </div>
-                        <div className="flex flex-col pt-56">
+                        <div className="flex flex-col ">
                             <img src={exe13} alt="Execom 13" className="h-[330px] w-[461px] " />
                         </div>
                         <div className="flex flex-col ">
@@ -267,6 +271,7 @@ const WebTeam = () => {
                             <img src={exe6} alt="Execom 6" className="w-full h-auto" />
                             <img src={exe7} alt="Execom 7" className="w-full h-auto" />
                             <img src={exe8} alt="Execom 8" className="w-full h-auto" />
+                            <img src={exe10} alt="Execom 10" className="w-full h-auto" />
                             <img src={exe11} alt="Execom 11" className="w-full h-auto" />
                             <img src={exe12} alt="Execom 12" className="w-full h-auto" />
                             <img src={exe13} alt="Execom 13" className="w-full h-auto" />
@@ -299,6 +304,7 @@ const WebTeam = () => {
                             <img src={exe6} alt="Execom 6" className="w-full h-auto" />
                             <img src={exe7} alt="Execom 7" className="w-full h-auto" />
                             <img src={exe8} alt="Execom 8" className="w-full h-auto" />
+                            <img src={exe10} alt="Execom 10" className="w-full h-auto" />
                             <img src={exe11} alt="Execom 11" className="w-full h-auto" />
                             <img src={exe12} alt="Execom 12" className="w-full h-auto" />
                             <img src={exe13} alt="Execom 13" className="w-full h-auto" />
