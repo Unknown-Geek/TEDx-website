@@ -17,6 +17,7 @@ import Highlights from "./components/Highlights"
 import Ticket from "./components/Ticket"
 import Merch from "./components/Merch"
 import WebTeam from "./components/WebTeam"
+
 import "./styles/ScrollingText.css"
 
 function AnimatedRoutes({ entryCompleted, setEntryCompleted, transitionSpeed }) {
@@ -116,12 +117,10 @@ export default function App() {
     const checkScreenSize = () => {
       setIsMobile(window.innerWidth < 768)
     }
-    </div>
 
-    <div className="w-full flex-1 flex h-10 flex-shrink-0 border-[#fafafa] border-b-2 border-t-2 overflow-hidden items-center justify-center -mt-36 md:-mt-0 md:absolute md:bottom-0">  
-      <ScrollingText className="lg:min-w-screen flex-shrink-0 lg:h-full" dark direction="right" />
-    </div>
-  </div>stener("resize", checkScreenSize)
+    checkScreenSize()
+    window.addEventListener("resize", checkScreenSize)
+    return () => window.removeEventListener("resize", checkScreenSize)
   }, [])
 
   const transitionSpeed = isMobile ? 0.8 : 0.6
