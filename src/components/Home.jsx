@@ -90,13 +90,13 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            <div className="flex border-l border-gray-200 bg-red-600 rounded-lg rounded-r-xl">
+            <div className="flex border-l border-gray-200 bg-gray-900 rounded-lg rounded-r-xl">
               <button
                 onClick={() => {
                   toast.dismiss(t.id)
                   handleMerchClick()
                 }}
-                className="w-full  border border-transparent rounded-sm rounded-r-xl p-4 flex items-center justify-center text-sm font-medium text-black hover:text-[#8B000B] focus:outline-none"
+                className="w-full  border border-transparent rounded-sm rounded-r-xl p-4 flex items-center justify-center  text-lg font-extrabold text-red-600 hover:text-[#8B000B] focus:outline-none"
               >
                 Buy Now
               </button>
@@ -106,7 +106,7 @@ const Home = () => {
           duration: 5000, // Auto dismiss after 5 seconds
           position: 'bottom-right',
         })
-      }, 5000)
+      }, 2000)
 
       return () => clearTimeout(showToastTimer)
     }
