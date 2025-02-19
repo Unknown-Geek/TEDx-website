@@ -80,30 +80,30 @@ const Home = () => {
             } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto h-[110px] flex ring-1 ring-black ring-opacity-5 `}>
             <div className="flex-1  w-0 p-4 border-2 rounded-lg rounded-r-lg">
               <div className="flex items-start rounded-lg rounded-r-lg">
-                <div className="ml-3 flex-1 flex-col gap-14 rounded-sm rounded-r-lg">
-                  <p className="text-lg font-semibold  text-gray-900">
+                <div className="ml-3 flex-1 flex-col gap-14 rounded-lg rounded-r-lg">
+                  <p className="text-lg font-semibold  text-gray-900 ">
                     Get Your TEDx Merch!
                   </p>
-                  <p className="mt-1 text-sm font-medium text-red-600">
-                    Limited edition merchandise available now
+                  <p className="mt-1 text-sm font-medium text-black">
+                    <span className="font-bold text-red-600 text-lg">Limited Edition </span> T-Shirt available now
                   </p>
                 </div>
               </div>
             </div>
-            <div className="flex border-l border-gray-200">
+            <div className="flex border-l border-gray-200 bg-red-600 rounded-lg rounded-r-xl">
               <button
                 onClick={() => {
                   toast.dismiss(t.id)
                   handleMerchClick()
                 }}
-                className="w-full  border border-transparent rounded-sm rounded-r-lg p-4 flex items-center justify-center text-sm font-medium text-[#BB000E] hover:text-[#8B000B] focus:outline-none"
+                className="w-full  border border-transparent rounded-sm rounded-r-xl p-4 flex items-center justify-center text-sm font-medium text-black hover:text-[#8B000B] focus:outline-none"
               >
                 Buy Now
               </button>
             </div>
           </div>
         ), {
-          duration: 3000, // Auto dismiss after 5 seconds
+          duration: 5000, // Auto dismiss after 5 seconds
           position: 'bottom-right',
         })
       }, 5000)
