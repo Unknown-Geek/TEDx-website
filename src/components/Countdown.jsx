@@ -89,9 +89,9 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 sm:px-6 md:px-8 lg:px-20 pt-8 sm:pt-12 md:pt-12 lg:pt-12  sm:pb-5 md:pb-5 lg:pb-5">
+    <div className="container mx-auto px-1 sm:px-6 md:px-8 lg:px-20 pt-8 sm:pt-12 md:pt-12 lg:pt-12  sm:pb-5 md:pb-5 lg:pb-5">
       {/* Countdown Timer */}
-      <div className="w-full max-w-[95%] mx-auto sm:pt-4 md:pt-6 lg:pt-[29px] px-2 md:py-2 py-2 sm:px-4 md:px-6 lg:px-8 mb-8 sm:mb-6 md:mb-8 
+      <div className="w-full max-w-[100%] mx-auto sm:pt-4 md:pt-6 lg:pt-[29px] px-2 md:py-2 py-2 sm:px-4 md:px-6 lg:px-8 mb-8 sm:mb-6 md:mb-8 
                     bg-[rgba(250,250,250,0.50)] rounded-lg sm:rounded-[20px] 
                     border-2 sm:border-3 md:border-4 lg:border-[5px] border-[#E31C25] 
                     backdrop-blur-[6.4px] flex justify-center items-center gap-1 sm:gap-2">

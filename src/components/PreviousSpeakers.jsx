@@ -246,7 +246,7 @@ const PreviousSpeakers = () => {
                       }}
                     >
                       <h1 className='text-red-600 font-vanguard font-semibold text-6xl'>{card.name}</h1>
-                      <p className="text-base text-white font-avantgarde leading-relaxed">
+                      <p className="text-base text-white font-avantgarde leading-relaxed overflow-y-auto">
                         {card.about}
                       </p>
                     </div>
