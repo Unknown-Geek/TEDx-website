@@ -27,7 +27,6 @@ export const About = () => {
     { number: "25", text: "Speakers" },
     { number: "50", text: "Community Members" },
     { number: "20", text: "Active Members" },
-    { number: "3",  text:  "Events"}
   ];
 
   return (
@@ -40,7 +39,7 @@ export const About = () => {
             <div className="mb-4 text-8xl sm:text-8xl lg:text-9xl text-[#fafafa] font-vanguard leading-tight lg:leading-[148px] font-extrabold">
               ABOUT
             </div>
-            <p className="w-full max-w-[99%] md:max-w-[630px] text-lg md:text-3xl text-[#fafafa] overflow-y-auto max-h-screen font-avantgarde leading-[1.8rem] sm:leading-[2.2rem] tracking-wide text-center lg:text-left">
+            <p className="w-full max-w-[100%] md:max-w-[630px] text-lg md:text-3xl text-[#fafafa] max-h-screen md:max-h-full font-avantgarde leading-[1.8rem] sm:leading-[2.2rem] tracking-wide text-center lg:text-left">
               TEDxCET is a locally organised independently run event. Rooted in the spirit of TED’s mission, it brings together thought leaders, innovators, and changemakers to share ideas worth spreading.
               At our illustrious event “ The Millenium” on 23rd February 2019, we curated a lineup of dynamic speakers such as Manju Sara Rajan, Sumesh Mangalassey, Nkihiya Shamsher,  Sreejesh Nair, Valmakry and P Radhakrishnan.
               Our next step was a “Paradigm Shift”. On May 6, 2023, we witnessed the remarkable and intriguing summit of distinctive personalities like Dr. Sulphi Noohu , Anjana Gopakumar, Neeraj Madhav ,Shubhi Agarwal and Manoj Raghavan.

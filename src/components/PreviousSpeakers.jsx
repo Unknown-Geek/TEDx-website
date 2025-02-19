@@ -219,11 +219,11 @@ const PreviousSpeakers = () => {
                       className="flex flex-col items-center bg-white rounded-3xl overflow-hidden border-[2px] border-red-600 backface-hidden"
                       style={{ backfaceVisibility: 'hidden' }}
                     >
-                      <div className="relative h-[300px]">
+                      <div className="relative h-[300px] w-[300px]">
                         <img
                           src={card.image}
                           alt={card.name}
-                          className="w-full h-full object-cover"
+                          className="w-full h-full object-contain"
                         />
                       </div>
                       <div className="p-6">

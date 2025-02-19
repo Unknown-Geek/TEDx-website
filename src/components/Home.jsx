@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import Lottie from "lottie-react"
 import dateLottie from "/public/assets/Date-Lottie.json"
@@ -11,13 +11,14 @@ import logo from "/public/assets/Logo-White.png"
 import image1 from "/public/assets/image1.svg"
 import image2 from "/public/assets/image2.svg"
 import image3 from "/public/assets/image3.svg"
+import toast, { Toaster } from 'react-hot-toast'
 
 const HoverStackImages = ({ images }) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <div
-      className=" w-[350px] h-[300px] sm:w-[300px] sm:h-[350px] mx-auto cursor-pointer"
+      className=" w-[350px] h-[300px] sm:w-[300px] sm:h-[350px] mx-auto  cursor-pointer"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -26,7 +27,7 @@ const HoverStackImages = ({ images }) => {
           key={index}
           src={image}
           alt={`Image ${index + 1}`}
-          className={`absolute inset-0 md:ml-16 ml-7 md:w-[1400px] md:h-[300px] w-[300px] place-self-auto md:pt-16 md:pb-10 pt-8 object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out
+          className={`absolute inset-0 scale-90  mx-auto md:w-[1400px] md:h-[300px] w-[300px] place-self-auto md:pt-16 md:pb-10 pt-8  object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out
             ${isHovered ? getHoverTransform(index) : "translate-x-0 translate-y-0"}
           `}
           style={{ zIndex: images.length - index }}
@@ -38,20 +39,20 @@ const HoverStackImages = ({ images }) => {
 
 const getHoverTransform = (index) => {
   const positions = [
-    
+
     "md:translate-x-[-25px] md:translate-y-[-30px] translate-x-[-15px] translate-y-[-20px]",
-     // First image moves up-left
-     "md:translate-x-[25px] md:translate-y-[30px] translate-x-[15px] translate-y-[20px]",
+    // First image moves up-left
+    "md:translate-x-[25px] md:translate-y-[30px] translate-x-[15px] translate-y-[20px]",
     "translate-x-[5px] translate-y-[-5px]",// Second image stays in the center
-     // Third image moves down-right
+    // Third image moves down-right
   ];
   return positions[index] || "";
 };
 
-const images = [image1, image3,image2];
+const images = [image1, image3, image2];
 
 const Home = () => {
-  
+
 
 
   const [isHovered, setIsHovered] = useState(false)
@@ -69,10 +70,53 @@ const Home = () => {
     navigate("/merch", { state: { toMerch: true } })
   }
 
+  useEffect(() => {
+    // Only show on mobile devices
+    if (window.innerWidth < 768) {
+      // Wait 5 seconds before showing toast
+      const showToastTimer = setTimeout(() => {
+        const toastId = toast.custom((t) => (
+          <div className={`${t.visible ? 'animate-enter' : 'animate-leave'
+            } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto h-[110px] flex ring-1 ring-black ring-opacity-5 `}>
+            <div className="flex-1  w-0 p-4 border-2 rounded-lg rounded-r-lg">
+              <div className="flex items-start rounded-lg rounded-r-lg">
+                <div className="ml-3 flex-1 flex-col gap-14 rounded-lg rounded-r-lg">
+                  <p className="text-lg font-semibold  text-gray-900 ">
+                    Get Your TEDx Merch!
+                  </p>
+                  <p className="mt-1 text-sm font-medium text-black">
+                    <span className="font-bold text-red-600 text-lg">Limited Edition </span> T-Shirt available now
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="flex border-l border-gray-200 bg-gray-900 rounded-lg rounded-r-xl">
+              <button
+                onClick={() => {
+                  toast.dismiss(t.id)
+                  handleMerchClick()
+                }}
+                className="w-full  border border-transparent rounded-sm rounded-r-xl p-4 flex items-center justify-center  text-lg font-extrabold text-red-600 hover:text-[#8B000B] focus:outline-none"
+              >
+                Buy Now
+              </button>
+            </div>
+          </div>
+        ), {
+          duration: 5000, // Auto dismiss after 5 seconds
+          position: 'bottom-right',
+        })
+      }, 2000)
+
+      return () => clearTimeout(showToastTimer)
+    }
+  }, [])
+
   return (
-    <div className="container mx-auto p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20">
+    <div className="container p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20 mx-auto">
+      <Toaster /> {/* Add this near the top of your JSX */}
       {/* Navigation */}
-      <nav className="flex justify-between items-center gap-4 mb-6 md:mb-8">
+      <nav className="flex  justify-between items-center gap-4 mb-6 md:mb-8">
         <div className="flex items-center justify-center bg-[#161616] rounded-[12px] w-[180px]">
           <img
             className="p-3 w-[170px] h-[50px]"
@@ -92,13 +136,13 @@ const Home = () => {
           ))}
           <button
             onClick={handleMerchClick}
-            className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-sm lg:text-3xl font-avantgarde hover:bg-[#FAFAFA] hover:text-[#BB000E]"
+            className="px-4 sm:px-4 md:px-6 py-2 bg-[#BB000E] border border-[#161616] rounded-[20px] text-[#FAFAFA] text-base lg:text-3xl font-vanguard hover:bg-[#FAFAFA] hover:text-[#BB000E]"
           >
             Buy Merch
           </button>
         </div>
         <button
-          className="md:hidden p-2 border border-[#161616] rounded-md"
+          className="md:hidden p-2 border  border-[#161616] rounded-md"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
           <Menu className="h-6 w-6" />
@@ -141,14 +185,14 @@ const Home = () => {
       )}
 
       {/* Hero Section */}
-      <div className="relative justify-center items-center  md:h-[300px] md:w-[1520px] w-[350px] h-[100px] rounded-[12px] bg-black overflow-hidden ">
-      <HoverStackImages images={images} />
-    </div>
+      <div className="relative justify-center items-center md:h-[300px] md:w-[1380px] w-full h-[100px] rounded-[12px] bg-black  overflow-hidden ">
+        <HoverStackImages images={images} />
+      </div>
 
 
 
       {/* Content Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pt-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 md:gap-6 pt-6 pr-0 ">
         {/* Left Panel */}
         <div className="border-2 border-[#161616] rounded-[20px]">
           <video
@@ -181,25 +225,23 @@ const Home = () => {
           <button
             className={`w-full text-4xl min-w-[200px] sm:min-w-[160px] whitespace-nowrap 
               sm:text-4xl md:text-3xl lg:text-3xl xl:text-5xl font-avantgarde p-4 rounded-[20px] flex items-center justify-center border-[3px]
-              ${
-                isHovered
-                  ? "bg-white text-black border-[#BB000E] shadow-[inset_0px_0px_14px_rgba(0,0,0,0.6)]"
-                  : "bg-[#BB000E] text-[#FAFAFA] border-[#161616] shadow-[inset_0px_0px_14px_rgba(227,28,37,0.60)]"
+              ${isHovered
+                ? "bg-white text-black border-[#BB000E] shadow-[inset_0px_0px_14px_rgba(0,0,0,0.6)]"
+                : "bg-[#BB000E] text-[#FAFAFA] border-[#161616] shadow-[inset_0px_0px_14px_rgba(227,28,37,0.60)]"
               }`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
           >
             BOOK TICKETS
             <ArrowUpRight
-              className={`w-14 flex-shrink-0 h-14 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pl-2 transition-all duration-300 ease-in-out ${
-                isHovered ? "rotate-45" : "rotate-0"
-              }`}
+              className={`w-14 flex-shrink-0 h-14 md:w-12 md:h-12 lg:w-14 lg:h-14 xl:w-16 xl:h-16 pl-2 transition-all duration-300 ease-in-out ${isHovered ? "rotate-45" : "rotate-0"
+                }`}
             />
           </button>
 
           {/* Date Display */}
           <div className="bg-[#161616] rounded-[20px] h-[200px] sm:h-[250px] md:h-[325px] flex px-6 md:px-0 justify-center items-center object-fill">
-            <Lottie animationData={dateLottie}  />
+            <Lottie animationData={dateLottie} />
           </div>
         </div>
       </div>

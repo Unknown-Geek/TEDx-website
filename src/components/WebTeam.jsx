@@ -17,7 +17,7 @@ import exe12 from "/public/assets/12.webp";
 import exe13 from "/public/assets/13.webp";
 import exe14 from "/public/assets/14.webp";
 import exe10 from "/public/assets/10.webp";
-//import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 
 const WebTeam = () => {

@@ -26,12 +26,12 @@ export default function Merch() {
             <span>Home</span>
           </button>
 
-          <div className="pt-20 pb-8">
+          <div className="pt-4 pb-0 md:pt-20 md:pb-8">
             <img src={tedx || "/placeholder.svg"} alt="tedx" className="max-w-[200px] md:max-w-96" />
           </div>
 
            <div className="flex justify-center items-center
-           w-[300px] h-[300px] md:w-[400px] md:h-[400px] md:-ml-20 -ml-20">
+           w-[300px] h-[250px] md:w-[400px] md:h-[400px] md:-ml-20 -ml-20">
             <img src={gbtext || "/placeholder.svg"} alt="grab your text" className="max-w-[200px] md:max-w-none" />
            </div>
 
