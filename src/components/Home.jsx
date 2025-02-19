@@ -26,7 +26,7 @@ const HoverStackImages = ({ images }) => {
           key={index}
           src={image}
           alt={`Image ${index + 1}`}
-          className={`absolute inset-0 md:w-[1400px] md:h-[300px] w-[330px] md:pt-16 md:pb-10 pt-5 object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out
+          className={`absolute inset-0 md:ml-16 ml-7 md:w-[1400px] md:h-[300px] w-[300px] place-self-auto md:pt-16 md:pb-10 pt-8 object-cover rounded-lg shadow-lg transition-transform duration-500 ease-in-out
             ${isHovered ? getHoverTransform(index) : "translate-x-0 translate-y-0"}
           `}
           style={{ zIndex: images.length - index }}
@@ -39,9 +39,9 @@ const HoverStackImages = ({ images }) => {
 const getHoverTransform = (index) => {
   const positions = [
     
-    "translate-x-[-25px] translate-y-[-30px]",
+    "md:translate-x-[-25px] md:translate-y-[-30px] translate-x-[-15px] translate-y-[-20px]",
      // First image moves up-left
-     "translate-x-[25px] translate-y-[30px]",
+     "md:translate-x-[25px] md:translate-y-[30px] translate-x-[15px] translate-y-[20px]",
     "translate-x-[5px] translate-y-[-5px]",// Second image stays in the center
      // Third image moves down-right
   ];
@@ -141,7 +141,7 @@ const Home = () => {
       )}
 
       {/* Hero Section */}
-      <div className="relative justify-center items-center  md:h-[300px] md:w-[14500px] w-[330px] h-[80px] rounded-[12px] bg-black overflow-hidden ">
+      <div className="relative justify-center items-center  md:h-[300px] md:w-[1520px] w-[350px] h-[100px] rounded-[12px] bg-black overflow-hidden ">
       <HoverStackImages images={images} />
     </div>
 
