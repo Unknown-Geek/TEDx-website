@@ -46,9 +46,10 @@ export default function Merch() {
             }`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
+            disabled
           >
             <div className="flex flex-row flex-nowrap items-center justify-center w-[300px] h-full px-[25.2px] py-2 text-[24px] md:text-[35.86px] font-avantgarde font-bold">
-              <span>BUY NOW</span>
+              <span>SOLD OUT</span>
               <ArrowRight className={`w-[32px] h-[32px] md:w-[52.8px] md:h-[52.8px] ml-2 -rotate-45 transition-all duration-300 ease-in-out ${
                 isHovered ? "rotate-1" : "-rotate-45"
               }`}/>
