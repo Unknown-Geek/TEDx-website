@@ -1,17 +1,61 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import image from "/public/assets/speaker-temp.svg"
+import image1 from "/public/assets/drishya-duggal2.webp"
 
 // Keep the original testimonials array commented out for later use
 // const testimonials = [ ... ];
 
 // Temporary data structure
-const temporaryTestimonials = Array(5).fill({
+const temporaryTestimonials = [{
     id: 1,
+    name: "DRISHYAA DUGGAL",
+    image: image1,
+    occupation: "Cyberpsychology Evangelist",
+    testimonial: "As a Cyberpsychology Evangelist at the Centre Against Cyber Bullying, Drishyaa Duggal explores the psychological dimensions of our digital world. A two-time TEDx speaker, she has shared her insights on cybersecurity and digital psychology at prestigious platforms including the United Nations and the World Summit on Information Society. Her expertise in examining digital behavior patterns and the psychological impact of emerging technologies has led her to conduct specialized workshops at institutions like AIIMS and FMS Delhi. At TEDxCET 2025, she will delve into how our increasingly digital interactions are fundamentally reshaping human behavior and society."
+},{
+    id: 2,
     name: "COMING SOON",
+    image: image,
     occupation: "Speaker Details",
     testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
-});
+},{
+    id: 3,
+    name: "COMING SOON",
+    image: image,
+    occupation: "Speaker Details",
+    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
+},{
+    id: 4,
+    name: "COMING SOON",
+    image: image,
+    occupation: "Speaker Details",
+    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
+},{
+    id: 5,
+    name: "COMING SOON",
+    image: image,
+    occupation: "Speaker Details",
+    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
+},{
+    id: 6,
+    name: "COMING SOON",
+    image: image,
+    occupation: "Speaker Details",
+    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
+},{
+    id: 7,
+    name: "COMING SOON",
+    image: image,
+    occupation: "Speaker Details",
+    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
+},{
+    id: 8,
+    name: "COMING SOON",
+    image: image,
+    occupation: "Speaker Details",
+    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
+}];
 
 const SpeakersList = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -87,9 +131,9 @@ const SpeakersList = () => {
                         >
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
                                 {/* Left Section - Image and TEDx Speaker */}
-                                <div className="flex flex-col items-center justify-center space-y-4">
+                                <div className="flex flex-col items-center justify-center space-y-6">
                                     <div className="w-full max-w-md opacity-100">
-                                        <img src={image} alt="Coming Soon" className="w-full h-auto  " />
+                                        <img src={testimonial.image} alt="Coming Soon" className="w-auto h-auto pt-16 pb-10   " />
                                     </div>
                                     <div className='flex-row hidden md:flex'><p className='font-vanguard text-4xl md:text-5xl text-red-600 font-medium'>TEDx</p><p className='font-vanguard text-4xl md:text-5xl text-black font-medium'>SPEAKER</p></div>
                                 </div>

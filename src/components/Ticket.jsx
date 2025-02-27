@@ -1,4 +1,4 @@
-import ticket from "/public/assets/Ticket.webp";
+import ticket from "/public/assets/Tickets.webp";
 
 const Ticket = () => {
     return (
