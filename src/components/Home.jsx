@@ -128,7 +128,7 @@ const Home = () => {
 }, []);
   return (
     <div className="container p-4 sm:p-6 md:p-8 lg:p-12 xl:p-20 mx-auto">
-      <Toaster /> {/* Add this near the top of your JSX */}
+    {/* Add this near the top of your JSX */}
       {/* Navigation */}
       <nav className="flex  justify-between items-center gap-4 mb-6 md:mb-8">
         <div className="flex items-center justify-center bg-[#161616] rounded-[12px] w-[180px]">
@@ -241,7 +241,7 @@ const Home = () => {
         {/* Right Panel */}
         <div className="rounded-[20px] flex flex-col gap-4 md:gap-6 md:col-span-2 lg:col-span-1 ">
           {/* Book Tickets Button */}
-          <button
+          <button  onClick={() => window.open("https://forms.gle/4A5tLDECx6rdBmUz9", "_blank")}
             className={`w-full text-4xl min-w-[200px] sm:min-w-[160px] whitespace-nowrap 
               sm:text-4xl md:text-3xl lg:text-3xl xl:text-5xl font-avantgarde p-4 rounded-[20px] flex items-center justify-center border-[3px]
               ${isHovered
