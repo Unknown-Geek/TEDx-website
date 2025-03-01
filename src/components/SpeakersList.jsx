@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import image from "/public/assets/speaker-temp.svg"
 import image1 from "/public/assets/drishya-duggal2.webp"
+import image2 from "/public/assets/speaker_2.webp"
+import image3 from "/public/assets/speaker_3.webp"
 
 // Keep the original testimonials array commented out for later use
 // const testimonials = [ ... ];
@@ -15,16 +17,16 @@ const temporaryTestimonials = [{
     testimonial: "As a Cyberpsychology Evangelist at the Centre Against Cyber Bullying, Drishyaa Duggal explores the psychological dimensions of our digital world. A two-time TEDx speaker, she has shared her insights on cybersecurity and digital psychology at prestigious platforms including the United Nations and the World Summit on Information Society. Her expertise in examining digital behavior patterns and the psychological impact of emerging technologies has led her to conduct specialized workshops at institutions like AIIMS and FMS Delhi. At TEDxCET 2025, she will delve into how our increasingly digital interactions are fundamentally reshaping human behavior and society."
 },{
     id: 2,
-    name: "COMING SOON",
-    image: image,
-    occupation: "Speaker Details",
-    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
+    name: "SUKIL RAM",
+    image: image2,
+    occupation: "ENTREPRENEUR",
+    testimonial: "He is an entrepreneur and the founder of Poomaram Ram's Kitchen. But what makes him special? Quitting the comforts of your daily job and following your passion! After leaving the confinement of his office cubicle, he immediately stared following what he loves best - the culinary delight of food. With support from fellow techies, he started his own restaurant - Poomaram Ram's Kitchen, which has now become a celebrated authentic Kerela restaurant in Trivandrum. With a never ending enthusiasm and energy, Suki Ram shows us how sometimes, all it takes is a small risk and a big heart to make your dreams a reality. His journey reflects the power of following one's passion and turning it into a fulfilling career."
 },{
     id: 3,
-    name: "COMING SOON",
-    image: image,
-    occupation: "Speaker Details",
-    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
+    name: "AMINA JUBAIR",
+    image: image3,
+    occupation: "RJ CET",
+    testimonial: "Amina Jubair is an eloquent speaker with a fresh perspective, dedicated to shaping conversations that inspire change. As a student representative from College of Engineering Trivandrum and a college RJ, she curates and delivers ideas that challenge conventional thinking, bringing innovation and insight to the stage. Her background as a third-year Civil Engineering student enriches her ability to break down complex topics into engaging narratives, making technical and societal discussions both accessible and thought-provoking. With a natural command of the stage and a passion for storytelling, she captivates audiences, sparking meaningful dialogue and new ways of thinking"
 },{
     id: 4,
     name: "COMING SOON",
