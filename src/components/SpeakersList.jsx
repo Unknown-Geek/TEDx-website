@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ChevronUp, ChevronDown } from 'lucide-react';
 import image from "/public/assets/speaker-temp.svg"
 import image1 from "/public/assets/drishya-duggal2.webp"
-import image2 from "/public/assets/speaker_2.webp"
+import image2 from "/public/assets/speaker-2.png"
 import image3 from "/public/assets/speaker_3.webp"
 import image4 from "/public/assets/speaker-4.png"
 import image5 from "/public/assets/speaker-5.png"
