@@ -4,11 +4,11 @@ import image from "/public/assets/speaker-temp.svg"
 import image1 from "/public/assets/drishya-duggal2.webp"
 import image2 from "/public/assets/speaker_2.webp"
 import image3 from "/public/assets/speaker_3.webp"
+import image4 from "/public/assets/speaker-4.png"
+import image5 from "/public/assets/speaker-5.png"
 
-// Keep the original testimonials array commented out for later use
-// const testimonials = [ ... ];
 
-// Temporary data structure
+
 const temporaryTestimonials = [{
     id: 1,
     name: "DRISHYAA DUGGAL",
@@ -29,17 +29,19 @@ const temporaryTestimonials = [{
     testimonial: "Amina Jubair is an eloquent speaker with a fresh perspective, dedicated to shaping conversations that inspire change. As a student representative from College of Engineering Trivandrum and a college RJ, she curates and delivers ideas that challenge conventional thinking, bringing innovation and insight to the stage. Her background as a third-year Civil Engineering student enriches her ability to break down complex topics into engaging narratives, making technical and societal discussions both accessible and thought-provoking. With a natural command of the stage and a passion for storytelling, she captivates audiences, sparking meaningful dialogue and new ways of thinking"
 },{
     id: 4,
-    name: "COMING SOON",
-    image: image,
-    occupation: "Speaker Details",
-    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
-},{
-    id: 5,
-    name: "COMING SOON",
-    image: image,
-    occupation: "Speaker Details",
-    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
-},{
+    name: "RJ NEENA",
+    image: image4,
+    occupation: "RJ RADIO MANGO",
+    testimonial: "It was the early 2000s and there was big boom happening in Kochi. Every morning, millions rise up to an infectious voice, motivating them to enjoy this beautiful day. And that voice belonged to none other than RJ Neena. She is one the first RJs in Kerala, having worked at Club FM and Radio Mango. RJ Neena also launched the first-ever transgender radio jockey through her radio show. She was invited to talk about the same at the Toastmaster's Platform at UST global, Infopark, Kochi when Infopark hired a Transgender Employee creating history. On a daily basis, she brings up social issues and caters it in a lighter sarcastic way to society. Her life is a motivation to all, proving that nothing can stand in the way of your happiness"
+},
+// {
+//     id: 5,
+//     name: "PRATHAPMOHAN NAIR",
+//     image: image5,
+//     occupation: "INTERNATIONAL CONSULTANT, UNCCD",
+//     testimonial: "An International Consultant to The United Nations in UNCCD, C. Prathapmohan Nair commands attention with every word.Being an alumni of CET, he is back again to share insights and offer an innovative perspectiveto his audience.As a Certified PPP Specialist and Accredited Green Building Professional, he has more than25 years of experience as in various corporates, IT, multi lateral development institutions andconsulting firms including ICICI, TCS, Asian Development Bank, World Bank,Price Waterhouse Coopers (PwC). His vast proficiency across multiple disciplines enables himto aa distinguished keynote speaker, sought after resource person and a leading corporate trainer."
+// },
+{
     id: 6,
     name: "COMING SOON",
     image: image,
@@ -131,17 +133,17 @@ const SpeakersList = () => {
                             key={index}
                             className={getSlidePosition(index)}
                         >
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-full">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 h-[700px] md:h-[400px] lg:h-[500px] xl:h-[600px]">
                                 {/* Left Section - Image and TEDx Speaker */}
                                 <div className="flex flex-col items-center justify-center space-y-6">
                                     <div className="w-full max-w-md opacity-100">
-                                        <img src={testimonial.image} alt="Coming Soon" className="w-auto h-auto pt-16 pb-10   " />
+                                        <img src={testimonial.image} alt="Coming Soon" className="w-auto h-auto   " />
                                     </div>
                                     <div className='flex-row hidden md:flex'><p className='font-vanguard text-4xl md:text-5xl text-red-600 font-medium'>TEDx</p><p className='font-vanguard text-4xl md:text-5xl text-black font-medium'>SPEAKER</p></div>
                                 </div>
 
                                 {/* Right Section - Name, Occupation, and Testimonial */}
-                                <div className="flex flex-col justify-center space-y-6">
+                                <div className="flex flex-col justify-center space-y-2">
                                     <div className="space-y-2">
                                         <h4 className="text-3xl md:text-6xl lg:text-7xl text-gray-900 font-vanguard font-medium">
                                             {testimonial.name}
