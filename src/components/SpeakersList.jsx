@@ -42,13 +42,13 @@ const temporaryTestimonials = [{
     occupation: "PLAYBACK SINGER",
     testimonial: "An icon of the Kerala music industry with a voice that has captivated audiences from around the world, which first found its roots right here in Trivandrum, Abhaya Hiranmayi is back home to take the center stage. Having been a part of renowned hits like Two Countries and  Malaikottai Vaaliban, Her distinct notions are certain to be a contemplative material for all gathered at TEDxCET."
 },
-// {
-//     id: 6,
-//     name: "PRATHAPMOHAN NAIR",
-//     image: image5,
-//     occupation: "INTERNATIONAL CONSULTANT, UNCCD",
-//     testimonial: "An International Consultant to The United Nations in UNCCD, C. Prathapmohan Nair commands attention with every word.Being an alumni of CET, he is back again to share insights and offer an innovative perspectiveto his audience.As a Certified PPP Specialist and Accredited Green Building Professional, he has more than25 years of experience as in various corporates, IT, multi lateral development institutions andconsulting firms including ICICI, TCS, Asian Development Bank, World Bank,Price Waterhouse Coopers (PwC). His vast proficiency across multiple disciplines enables himto aa distinguished keynote speaker, sought after resource person and a leading corporate trainer."
-// },
+{
+    id: 6,
+    name: "PRATHAPMOHAN NAIR",
+    image: image5,
+    occupation: "INTERNATIONAL CONSULTANT, UNCCD",
+    testimonial: "An International Consultant to The United Nations in UNCCD, C. Prathapmohan Nair commands attention with every word.Being an alumni of CET, he is back again to share insights and offer an innovative perspectiveto his audience.As a Certified PPP Specialist and Accredited Green Building Professional, he has more than25 years of experience as in various corporates, IT, multi lateral development institutions andconsulting firms including ICICI, TCS, Asian Development Bank, World Bank,Price Waterhouse Coopers (PwC). His vast proficiency across multiple disciplines enables himto aa distinguished keynote speaker, sought after resource person and a leading corporate trainer."
+},
 ,{
     id: 7,
     name: "COMING SOON",
