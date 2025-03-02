@@ -7,6 +7,7 @@ import image3 from "/public/assets/speaker_3.webp"
 import image4 from "/public/assets/speaker-4.png"
 import image5 from "/public/assets/speaker-5.png"
 import image6 from "/public/assets/speaker-6.webp"
+import image7 from "/public/assets/speaker-7.png"
 
 
 
@@ -51,10 +52,10 @@ const temporaryTestimonials = [{
 },
 {
     id: 7,
-    name: "COMING SOON",
-    image: image,
-    occupation: "Speaker Details",  
-    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
+    name: "DIVYA S IYER",
+    image: image7,
+    occupation: "IAS OFFICER",  
+    testimonial: "Divya S. Iyer is a dynamic IAS officer with exceptional oratory skills who not only understands policy and governance but also has the rare ability to connect with people through insightful and persuasive communication. With a strong grasp of socio-political and economic issues, she engage audiences with compelling narratives, real-world examples, and a vision for progress. Her words inspire action, fostering trust and confidence among citizens and policymakers alike.  Whether addressing bureaucratic gatherings, public forums, or digital platforms, her presence commands attention, leaving a lasting impact on the audience. In a world where leadership is not just about decision-making but also about persuasion and connection, an IAS officer with the gift of speech becomes a true catalyst for change."
 },{
     id: 8,
     name: "COMING SOON",
