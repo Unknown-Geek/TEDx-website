@@ -6,6 +6,7 @@ import image2 from "/public/assets/speaker-2.png"
 import image3 from "/public/assets/speaker_3.webp"
 import image4 from "/public/assets/speaker-4.png"
 import image5 from "/public/assets/speaker-5.png"
+import image6 from "/public/assets/speaker-6.webp"
 
 
 
@@ -34,20 +35,21 @@ const temporaryTestimonials = [{
     occupation: "RJ RADIO MANGO",
     testimonial: "It was the early 2000s and there was big boom happening in Kochi. Every morning, millions rise up to an infectious voice, motivating them to enjoy this beautiful day. And that voice belonged to none other than RJ Neena. She is one the first RJs in Kerala, having worked at Club FM and Radio Mango. RJ Neena also launched the first-ever transgender radio jockey through her radio show. She was invited to talk about the same at the Toastmaster's Platform at UST global, Infopark, Kochi when Infopark hired a Transgender Employee creating history. On a daily basis, she brings up social issues and caters it in a lighter sarcastic way to society. Her life is a motivation to all, proving that nothing can stand in the way of your happiness"
 },
+{
+    id: 5,
+    name: "ABHYA HIRANMAYI",
+    image: image6,
+    occupation: "PLAYBACK SINGER",
+    testimonial: "An icon of the Kerala music industry with a voice that has captivated audiences from around the world, which first found its roots right here in Trivandrum, Abhaya Hiranmayi is back home to take the center stage. Having been a part of renowned hits like Two Countries and  Malaikottai Vaaliban, Her distinct notions are certain to be a contemplative material for all gathered at TEDxCET."
+},
 // {
-//     id: 5,
+//     id: 6,
 //     name: "PRATHAPMOHAN NAIR",
 //     image: image5,
 //     occupation: "INTERNATIONAL CONSULTANT, UNCCD",
 //     testimonial: "An International Consultant to The United Nations in UNCCD, C. Prathapmohan Nair commands attention with every word.Being an alumni of CET, he is back again to share insights and offer an innovative perspectiveto his audience.As a Certified PPP Specialist and Accredited Green Building Professional, he has more than25 years of experience as in various corporates, IT, multi lateral development institutions andconsulting firms including ICICI, TCS, Asian Development Bank, World Bank,Price Waterhouse Coopers (PwC). His vast proficiency across multiple disciplines enables himto aa distinguished keynote speaker, sought after resource person and a leading corporate trainer."
 // },
-{
-    id: 6,
-    name: "COMING SOON",
-    image: image,
-    occupation: "Speaker Details",
-    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
-},{
+,{
     id: 7,
     name: "COMING SOON",
     image: image,
@@ -137,7 +139,7 @@ const SpeakersList = () => {
                                 {/* Left Section - Image and TEDx Speaker */}
                                 <div className="flex flex-col items-center justify-center space-y-6">
                                     <div className="w-full max-w-md opacity-100">
-                                        <img src={testimonial.image} alt="Coming Soon" className="w-auto h-auto   " />
+                                        <img src={testimonial.image} alt="Coming Soon" className="w-auto h-auto " />
                                     </div>
                                     <div className='flex-row hidden md:flex'><p className='font-vanguard text-4xl md:text-5xl text-red-600 font-medium'>TEDx</p><p className='font-vanguard text-4xl md:text-5xl text-black font-medium'>SPEAKER</p></div>
                                 </div>
