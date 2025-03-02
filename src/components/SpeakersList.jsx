@@ -49,11 +49,11 @@ const temporaryTestimonials = [{
     occupation: "INTERNATIONAL CONSULTANT, UNCCD",
     testimonial: "An International Consultant to The United Nations in UNCCD, C. Prathapmohan Nair commands attention with every word.Being an alumni of CET, he is back again to share insights and offer an innovative perspectiveto his audience.As a Certified PPP Specialist and Accredited Green Building Professional, he has more than25 years of experience as in various corporates, IT, multi lateral development institutions andconsulting firms including ICICI, TCS, Asian Development Bank, World Bank,Price Waterhouse Coopers (PwC). His vast proficiency across multiple disciplines enables himto aa distinguished keynote speaker, sought after resource person and a leading corporate trainer."
 },
-,{
+{
     id: 7,
     name: "COMING SOON",
     image: image,
-    occupation: "Speaker Details",
+    occupation: "Speaker Details",  
     testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
 },{
     id: 8,
