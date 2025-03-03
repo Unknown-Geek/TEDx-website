@@ -91,7 +91,7 @@ const SpeakersList = () => {
         const baseClasses = 'absolute w-full flex max-w-5xl mx-auto bg-white p-4 md:p-6 rounded-lg shadow-lg transition-all duration-500 ease-in-out border-[2px] border-red-500 shadow-[0_0_18px_rgba(239,68,68,0.6)]';
 
         if (position === 0) {
-            return `${ranslate-y-0 scale-100 opacity-100 z-20`;
+            return `${baseClasses}translate-y-0 scale-100 opacity-100 z-20}`;
         }
         if (position === 1) {
             return `${baseClasses} translate-y-32 md:translate-y-48 scale-95 opacity-60 z-10`;
