@@ -56,12 +56,6 @@ const temporaryTestimonials = [{
     image: image7,
     occupation: "IAS OFFICER",  
     testimonial: "Divya S. Iyer is a dynamic IAS officer with exceptional oratory skills who not only understands policy and governance but also has the rare ability to connect with people through insightful and persuasive communication. With a strong grasp of socio-political and economic issues, she engage audiences with compelling narratives, real-world examples, and a vision for progress. Her words inspire action, fostering trust and confidence among citizens and policymakers alike.  Whether addressing bureaucratic gatherings, public forums, or digital platforms, her presence commands attention, leaving a lasting impact on the audience. In a world where leadership is not just about decision-making but also about persuasion and connection, an IAS officer with the gift of speech becomes a true catalyst for change."
-},{
-    id: 8,
-    name: "COMING SOON",
-    image: image,
-    occupation: "Speaker Details",
-    testimonial: "We're excited to announce our upcoming speakers. Stay tuned for updates on the incredible minds who will be sharing their ideas and stories on our stage."
 }];
 
 const SpeakersList = () => {
@@ -97,7 +91,7 @@ const SpeakersList = () => {
         const baseClasses = 'absolute w-full flex max-w-5xl mx-auto bg-white p-4 md:p-6 rounded-lg shadow-lg transition-all duration-500 ease-in-out border-[2px] border-red-500 shadow-[0_0_18px_rgba(239,68,68,0.6)]';
 
         if (position === 0) {
-            return `${baseClasses} translate-y-0 scale-100 opacity-100 z-20`;
+            return `${ranslate-y-0 scale-100 opacity-100 z-20`;
         }
         if (position === 1) {
             return `${baseClasses} translate-y-32 md:translate-y-48 scale-95 opacity-60 z-10`;
