@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Configure event date - Using Date object directly for better timezone handling
-const EVENT_DATE = new Date(2025, 2, 8, 9, 0, 0); // March 8th, 2025, 9:00 AM
+const EVENT_DATE = new Date(2025, 2, 23, 9, 0, 0); // March 8th, 2025, 9:00 AM
 
 const TimerUnit = ({ value, label }) => (
   <div className="flex flex-col justify-center items-center">
