@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import Lottie from "lottie-react"
-import dateLottie from "/public/assets/Date-Lottie.json"
+import dateLottie from "/public/assets/TEDxCETDate.json"
 import image535 from "/public/assets/image 535.png"
 import image536 from "/public/assets/image 536.png"
 import butterflyEffect from "/public/assets/Butterfly-Effect.svg"
