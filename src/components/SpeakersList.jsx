@@ -7,17 +7,11 @@ import image3 from "/public/assets/speaker_3.webp"
 import image4 from "/public/assets/speaker-4.png"
 import image5 from "/public/assets/speaker-5.png"
 import image6 from "/public/assets/speaker-6.webp"
-import image7 from "/public/assets/speaker-7.png"
+import image7 from "/public/assets/kok.png"
 
 
 
 const temporaryTestimonials = [{
-    id: 1,
-    name: "DRISHYAA DUGGAL",
-    image: image1,
-    occupation: "Cyberpsychology Evangelist",
-    testimonial: "As a Cyberpsychology Evangelist at the Centre Against Cyber Bullying, Drishyaa Duggal explores the psychological dimensions of our digital world. A two-time TEDx speaker, she has shared her insights on cybersecurity and digital psychology at prestigious platforms including the United Nations and the World Summit on Information Society. Her expertise in examining digital behavior patterns and the psychological impact of emerging technologies has led her to conduct specialized workshops at institutions like AIIMS and FMS Delhi. At TEDxCET 2025, she will delve into how our increasingly digital interactions are fundamentally reshaping human behavior and society."
-},{
     id: 2,
     name: "SUKIL RAM",
     image: image2,
@@ -52,10 +46,10 @@ const temporaryTestimonials = [{
 },
 {
     id: 7,
-    name: "DIVYA S IYER",
+    name: "ASWANTH KOK",
     image: image7,
-    occupation: "IAS OFFICER",  
-    testimonial: "Divya S. Iyer is a dynamic IAS officer with exceptional oratory skills who not only understands policy and governance but also has the rare ability to connect with people through insightful and persuasive communication. With a strong grasp of socio-political and economic issues, she engage audiences with compelling narratives, real-world examples, and a vision for progress. Her words inspire action, fostering trust and confidence among citizens and policymakers alike.  Whether addressing bureaucratic gatherings, public forums, or digital platforms, her presence commands attention, leaving a lasting impact on the audience. In a world where leadership is not just about decision-making but also about persuasion and connection, an IAS officer with the gift of speech becomes a true catalyst for change."
+    occupation: "MOVIE REVIEWER",  
+    testimonial: "An Indian YouTuber renowned for his engaging reviews of Malayalam, Tamil, Hindi, and Telugu films, as well as movie trailers. In addition to film critiques, he shares his thoughts on the film industry and covers international football and World Cup updates. His charismatic personality and captivating approach to media discussions have earned him a loyal audience, with over 400,000 subscribers on his YouTube channel. Now, CETian's have an exciting opportunity to hear from him in person, as he is set to visit the campus for TEDxCET!"
 }];
 
 const SpeakersList = () => {
